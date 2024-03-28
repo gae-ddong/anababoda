@@ -111,6 +111,16 @@ class UsersRecord extends FirestoreRecord {
   int get discount => _discount ?? 0;
   bool hasDiscount() => _discount != null;
 
+  // "date_check" field.
+  int? _dateCheck;
+  int get dateCheck => _dateCheck ?? 0;
+  bool hasDateCheck() => _dateCheck != null;
+
+  // "date_start" field.
+  DateTime? _dateStart;
+  DateTime? get dateStart => _dateStart;
+  bool hasDateStart() => _dateStart != null;
+
   void _initializeFields() {
     _displayName = snapshotData['display_name'] as String?;
     _email = snapshotData['email'] as String?;
@@ -131,6 +141,8 @@ class UsersRecord extends FirestoreRecord {
     _walkLog = castToType<double>(snapshotData['walkLog']);
     _giftcard = castToType<int>(snapshotData['giftcard']);
     _discount = castToType<int>(snapshotData['discount']);
+    _dateCheck = castToType<int>(snapshotData['date_check']);
+    _dateStart = snapshotData['date_start'] as DateTime?;
   }
 
   static CollectionReference get collection =>
@@ -186,6 +198,8 @@ Map<String, dynamic> createUsersRecordData({
   double? walkLog,
   int? giftcard,
   int? discount,
+  int? dateCheck,
+  DateTime? dateStart,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -208,6 +222,8 @@ Map<String, dynamic> createUsersRecordData({
       'walkLog': walkLog,
       'giftcard': giftcard,
       'discount': discount,
+      'date_check': dateCheck,
+      'date_start': dateStart,
     }.withoutNulls,
   );
 
@@ -237,7 +253,9 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.result == e2?.result &&
         e1?.walkLog == e2?.walkLog &&
         e1?.giftcard == e2?.giftcard &&
-        e1?.discount == e2?.discount;
+        e1?.discount == e2?.discount &&
+        e1?.dateCheck == e2?.dateCheck &&
+        e1?.dateStart == e2?.dateStart;
   }
 
   @override
@@ -260,7 +278,9 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.result,
         e?.walkLog,
         e?.giftcard,
-        e?.discount
+        e?.discount,
+        e?.dateCheck,
+        e?.dateStart
       ]);
 
   @override

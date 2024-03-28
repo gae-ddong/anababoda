@@ -36,3 +36,5 @@ export '/demo0125/footprintlist0127/footprintlist0127_widget.dart'
 export '/demo0125/basket0203/basket0203_widget.dart' show Basket0203Widget;
 export '/demo0125/alarm0203/alarm0203_widget.dart' show Alarm0203Widget;
 export '/demo0125/information/information_widget.dart' show InformationWidget;
+export '/demo0125/upload_transport0318/upload_transport0318_widget.dart'
+    show UploadTransport0318Widget;

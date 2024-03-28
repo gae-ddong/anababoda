@@ -338,12 +338,12 @@ class _Mission0125WidgetState extends State<Mission0125Widget> {
                                 : 2,
                           ));
 
+                      context.pushNamed('shoppinglist0126');
+
                       await rowDateRecord!.reference
                           .update(createDateRecordData(
                         createdTimeS: getCurrentTimestamp,
                       ));
-
-                      context.pushNamed('shoppinglist0126');
                     },
                     child: Row(
                       mainAxisSize: MainAxisSize.max,

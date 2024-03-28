@@ -218,6 +218,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'information',
           path: '/information',
           builder: (context, params) => InformationWidget(),
+        ),
+        FFRoute(
+          name: 'uploadTransport0318',
+          path: '/uploadTransport0318',
+          builder: (context, params) => UploadTransport0318Widget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

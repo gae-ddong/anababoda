@@ -234,101 +234,95 @@ class _Homepage0125WidgetState extends State<Homepage0125Widget> {
                     mainAxisSize: MainAxisSize.max,
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            0.0, 20.0, 0.0, 20.0),
-                        child: Container(
-                          width: 100.0,
-                          height: 100.0,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                          ),
-                          child: InkWell(
-                            splashColor: Colors.transparent,
-                            focusColor: Colors.transparent,
-                            hoverColor: Colors.transparent,
-                            highlightColor: Colors.transparent,
-                            onTap: () async {
-                              context.pushNamed('uploadTaxbills0126');
-                            },
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      15.0, 15.0, 15.0, 15.0),
-                                  child: Container(
-                                    width: 100.0,
-                                    height: 100.0,
-                                    decoration: BoxDecoration(
-                                      color: Color(0xFF7C826C),
-                                      boxShadow: [
-                                        BoxShadow(
-                                          blurRadius: 2.0,
-                                          color: Color(0x33000000),
-                                          offset: Offset(3.0, 4.0),
-                                          spreadRadius: 2.0,
-                                        )
-                                      ],
-                                      shape: BoxShape.circle,
-                                      border: Border.all(
-                                        color: Color(0x004B986D),
-                                      ),
-                                    ),
-                                    child: Icon(
-                                      Icons.camera_alt,
-                                      color: FlutterFlowTheme.of(context)
-                                          .textColor,
-                                      size: 40.0,
+                      Container(
+                        width: 100.0,
+                        height: 100.0,
+                        decoration: BoxDecoration(
+                          color:
+                              FlutterFlowTheme.of(context).secondaryBackground,
+                        ),
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            context.pushNamed('uploadTaxbills0126');
+                          },
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    15.0, 15.0, 15.0, 15.0),
+                                child: Container(
+                                  width: 100.0,
+                                  height: 100.0,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFF7C826C),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        blurRadius: 2.0,
+                                        color: Color(0x33000000),
+                                        offset: Offset(3.0, 4.0),
+                                        spreadRadius: 2.0,
+                                      )
+                                    ],
+                                    shape: BoxShape.circle,
+                                    border: Border.all(
+                                      color: Color(0x004B986D),
                                     ),
                                   ),
+                                  child: Icon(
+                                    Icons.camera_alt,
+                                    color:
+                                        FlutterFlowTheme.of(context).textColor,
+                                    size: 40.0,
+                                  ),
                                 ),
-                                Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 0.0, 0.0, 2.0),
-                                      child: Text(
-                                        FFLocalizations.of(context).getText(
-                                          'vjwn5zu8' /* 공과금 고지서 찍고 */,
-                                        ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .headlineSmall
-                                            .override(
-                                              fontFamily: 'gowum',
-                                              fontWeight: FontWeight.w600,
-                                              useGoogleFonts:
-                                                  GoogleFonts.asMap()
-                                                      .containsKey('gowum'),
-                                            ),
+                              ),
+                              Column(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 2.0),
+                                    child: Text(
+                                      FFLocalizations.of(context).getText(
+                                        'vjwn5zu8' /* 공과금 고지서 찍고 */,
                                       ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .headlineSmall
+                                          .override(
+                                            fontFamily: 'gowum',
+                                            fontWeight: FontWeight.w600,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey('gowum'),
+                                          ),
                                     ),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 2.0, 0.0, 0.0),
-                                      child: Text(
-                                        FFLocalizations.of(context).getText(
-                                          'tgc6xclf' /* 포인트 받기 */,
-                                        ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'gowum',
-                                              useGoogleFonts:
-                                                  GoogleFonts.asMap()
-                                                      .containsKey('gowum'),
-                                            ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 2.0, 0.0, 0.0),
+                                    child: Text(
+                                      FFLocalizations.of(context).getText(
+                                        'tgc6xclf' /* 포인트 받기 */,
                                       ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'gowum',
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey('gowum'),
+                                          ),
                                     ),
-                                  ],
-                                ),
-                              ],
-                            ),
+                                  ),
+                                ],
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -424,105 +418,191 @@ class _Homepage0125WidgetState extends State<Homepage0125Widget> {
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            0.0, 20.0, 0.0, 20.0),
-                        child: Container(
-                          width: 100.0,
-                          height: 100.0,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                          ),
-                          child: InkWell(
-                            splashColor: Colors.transparent,
-                            focusColor: Colors.transparent,
-                            hoverColor: Colors.transparent,
-                            highlightColor: Colors.transparent,
-                            onTap: () async {
-                              context.pushNamed('mission0125');
-                            },
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      15.0, 15.0, 15.0, 15.0),
-                                  child: Container(
-                                    width: 100.0,
-                                    height: 100.0,
-                                    decoration: BoxDecoration(
-                                      color: Color(0xFF7C826C),
-                                      boxShadow: [
-                                        BoxShadow(
-                                          blurRadius: 2.0,
-                                          color: Color(0x33000000),
-                                          offset: Offset(3.0, 4.0),
-                                          spreadRadius: 2.0,
-                                        )
-                                      ],
-                                      shape: BoxShape.circle,
-                                      border: Border.all(
-                                        color: Color(0x004B986D),
-                                      ),
+                      Container(
+                        width: 100.0,
+                        height: 100.0,
+                        decoration: BoxDecoration(
+                          color:
+                              FlutterFlowTheme.of(context).secondaryBackground,
+                        ),
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            context.pushNamed('mission0125');
+                          },
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    15.0, 15.0, 15.0, 15.0),
+                                child: Container(
+                                  width: 100.0,
+                                  height: 100.0,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFF7C826C),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        blurRadius: 2.0,
+                                        color: Color(0x33000000),
+                                        offset: Offset(3.0, 4.0),
+                                        spreadRadius: 2.0,
+                                      )
+                                    ],
+                                    shape: BoxShape.circle,
+                                    border: Border.all(
+                                      color: Color(0x004B986D),
                                     ),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          30.0, 15.0, 0.0, 0.0),
-                                      child: FaIcon(
-                                        FontAwesomeIcons.coins,
-                                        color: FlutterFlowTheme.of(context)
-                                            .textColor,
-                                        size: 40.0,
-                                      ),
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        30.0, 15.0, 0.0, 0.0),
+                                    child: FaIcon(
+                                      FontAwesomeIcons.coins,
+                                      color: FlutterFlowTheme.of(context)
+                                          .textColor,
+                                      size: 40.0,
                                     ),
                                   ),
                                 ),
-                                Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 0.0, 0.0, 2.0),
-                                      child: Text(
-                                        FFLocalizations.of(context).getText(
-                                          'en2fjl2t' /* 매일 미션하고  */,
-                                        ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .headlineSmall
-                                            .override(
-                                              fontFamily: 'gowum',
-                                              fontWeight: FontWeight.w600,
-                                              useGoogleFonts:
-                                                  GoogleFonts.asMap()
-                                                      .containsKey('gowum'),
-                                            ),
+                              ),
+                              Column(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 2.0),
+                                    child: Text(
+                                      FFLocalizations.of(context).getText(
+                                        'en2fjl2t' /* 매일 미션하고  */,
                                       ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .headlineSmall
+                                          .override(
+                                            fontFamily: 'gowum',
+                                            fontWeight: FontWeight.w600,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey('gowum'),
+                                          ),
                                     ),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 2.0, 0.0, 0.0),
-                                      child: Text(
-                                        FFLocalizations.of(context).getText(
-                                          'zxfgir4f' /* 포인트 모으기 */,
-                                        ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'gowum',
-                                              useGoogleFonts:
-                                                  GoogleFonts.asMap()
-                                                      .containsKey('gowum'),
-                                            ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 2.0, 0.0, 0.0),
+                                    child: Text(
+                                      FFLocalizations.of(context).getText(
+                                        'zxfgir4f' /* 포인트 모으기 */,
                                       ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'gowum',
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey('gowum'),
+                                          ),
                                     ),
-                                  ],
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 100.0,
+                        height: 100.0,
+                        decoration: BoxDecoration(
+                          color:
+                              FlutterFlowTheme.of(context).secondaryBackground,
+                        ),
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            context.pushNamed('uploadTransport0318');
+                          },
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    15.0, 15.0, 15.0, 15.0),
+                                child: Container(
+                                  width: 100.0,
+                                  height: 100.0,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFF7C826C),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        blurRadius: 2.0,
+                                        color: Color(0x33000000),
+                                        offset: Offset(3.0, 4.0),
+                                        spreadRadius: 2.0,
+                                      )
+                                    ],
+                                    shape: BoxShape.circle,
+                                    border: Border.all(
+                                      color: Color(0x004B986D),
+                                    ),
+                                  ),
+                                  child: Icon(
+                                    Icons.train,
+                                    color:
+                                        FlutterFlowTheme.of(context).textColor,
+                                    size: 40.0,
+                                  ),
                                 ),
-                              ],
-                            ),
+                              ),
+                              Column(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 2.0),
+                                    child: Text(
+                                      FFLocalizations.of(context).getText(
+                                        'mjni2ir0' /* 대중교통 이용 인증하고 */,
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .headlineSmall
+                                          .override(
+                                            fontFamily: 'gowum',
+                                            fontWeight: FontWeight.w600,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey('gowum'),
+                                          ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 2.0, 0.0, 0.0),
+                                    child: Text(
+                                      FFLocalizations.of(context).getText(
+                                        'hwv1sm7b' /* 포인트 받기 */,
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'gowum',
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey('gowum'),
+                                          ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
                           ),
                         ),
                       ),

@@ -92,14 +92,6 @@ class _Account0125WidgetState extends State<Account0125Widget> {
               return;
             }
 
-            await UsersRecord.collection
-                .doc(user.uid)
-                .update(createUsersRecordData(
-                  displayName: _model.yourNameAccoountController.text,
-                  age: int.tryParse(_model.yourAgeAccoountController.text),
-                  discount: 0,
-                ));
-
             context.goNamedAuth('homepage0125', context.mounted);
           },
           child: SingleChildScrollView(
@@ -467,15 +459,6 @@ class _Account0125WidgetState extends State<Account0125Widget> {
                       if (user == null) {
                         return;
                       }
-
-                      await UsersRecord.collection
-                          .doc(user.uid)
-                          .update(createUsersRecordData(
-                            displayName: _model.yourNameAccoountController.text,
-                            age: int.tryParse(
-                                _model.yourAgeAccoountController.text),
-                            discount: 0,
-                          ));
 
                       await BudgetListRecord.collection
                           .doc()
