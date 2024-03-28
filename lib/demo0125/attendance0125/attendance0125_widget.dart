@@ -238,7 +238,7 @@ class _Attendance0125WidgetState extends State<Attendance0125Widget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 10.0, 10.0, 10.0),
                             child: FFButtonWidget(
-                              onPressed: (_model.count == 2)
+                              onPressed: (_model.count != 2)
                                   ? null
                                   : () {
                                       print('Button pressed ...');
@@ -287,9 +287,11 @@ class _Attendance0125WidgetState extends State<Attendance0125Widget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   10.0, 10.0, 10.0, 10.0),
                               child: FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
-                                },
+                                onPressed: (_model.count != 3)
+                                    ? null
+                                    : () {
+                                        print('Button pressed ...');
+                                      },
                                 text: FFLocalizations.of(context).getText(
                                   '5jezp6lp' /* 4일차 */,
                                 ),
@@ -325,9 +327,11 @@ class _Attendance0125WidgetState extends State<Attendance0125Widget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   10.0, 10.0, 10.0, 10.0),
                               child: FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
-                                },
+                                onPressed: (_model.count != 4)
+                                    ? null
+                                    : () {
+                                        print('Button pressed ...');
+                                      },
                                 text: FFLocalizations.of(context).getText(
                                   'p3od2ynd' /* 5일차 */,
                                 ),
@@ -363,9 +367,11 @@ class _Attendance0125WidgetState extends State<Attendance0125Widget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   10.0, 10.0, 10.0, 10.0),
                               child: FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
-                                },
+                                onPressed: (_model.count != 5)
+                                    ? null
+                                    : () {
+                                        print('Button pressed ...');
+                                      },
                                 text: FFLocalizations.of(context).getText(
                                   'cdl10yu9' /* 6일차 */,
                                 ),
@@ -401,9 +407,11 @@ class _Attendance0125WidgetState extends State<Attendance0125Widget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   10.0, 10.0, 10.0, 10.0),
                               child: FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
-                                },
+                                onPressed: (_model.count != 6)
+                                    ? null
+                                    : () {
+                                        print('Button pressed ...');
+                                      },
                                 text: FFLocalizations.of(context).getText(
                                   'qlys5j10' /* 7일차 */,
                                 ),
@@ -440,18 +448,19 @@ class _Attendance0125WidgetState extends State<Attendance0125Widget> {
                       ),
                       FFButtonWidget(
                         onPressed: () async {
-                          if (dateTimeFormat(
-                                    'yMd',
-                                    functions.subDate(),
-                                    locale: FFLocalizations.of(context)
-                                        .languageCode,
-                                  ) !=
-                                  dateTimeFormat(
-                                    'yMd',
-                                    attendance0125DateRecord?.createdTimeA,
-                                    locale: FFLocalizations.of(context)
-                                        .languageCode,
-                                  )
+                          if ((dateTimeFormat(
+                                        'yMd',
+                                        functions.subDate(),
+                                        locale: FFLocalizations.of(context)
+                                            .languageCode,
+                                      ) ==
+                                      dateTimeFormat(
+                                        'yMd',
+                                        attendance0125DateRecord?.createdTimeA,
+                                        locale: FFLocalizations.of(context)
+                                            .languageCode,
+                                      )) &&
+                                  (_model.count! < 7)
                               ? true
                               : true) {
                             await attendance0125DateRecord!.reference
@@ -468,11 +477,14 @@ class _Attendance0125WidgetState extends State<Attendance0125Widget> {
                               ),
                             });
                           } else {
-                            await attendance0125DateRecord!.reference
-                                .update(createDateRecordData(
-                              createdTimeA: functions.subDate(),
-                            ));
-                            _model.count = 0;
+                            if (functions.checkDate(
+                                attendance0125DateRecord!.createdTimeA!)!) {
+                              await attendance0125DateRecord!.reference
+                                  .update(createDateRecordData(
+                                createdTimeA: functions.subDate(),
+                              ));
+                              _model.count = 0;
+                            }
                           }
                         },
                         text: FFLocalizations.of(context).getText(

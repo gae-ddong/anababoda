@@ -73,3 +73,11 @@ bool costCounting(String cost) {
     return false;
   }
 }
+
+bool? checkDate(DateTime time) {
+  final today = DateTime.now();
+
+  if (today.difference(time).inDays > 1) return true;
+
+  return false;
+}
