@@ -92,7 +92,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'account0125',
           path: '/account0125',
           builder: (context, params) => Account0125Widget(
-            yourname: params.getParam('yourname', ParamType.String),
+            yourname: params.getParam(
+              'yourname',
+              ParamType.String,
+            ),
           ),
         ),
         FFRoute(
@@ -113,8 +116,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => params.isEmpty
               ? NavBarPage(initialPage: 'mypage0125')
               : Mypage0125Widget(
-                  userProfile: params.getParam('userProfile',
-                      ParamType.DocumentReference, false, ['users']),
+                  userProfile: params.getParam(
+                    'userProfile',
+                    ParamType.DocumentReference,
+                    false,
+                    ['users'],
+                  ),
                 ),
         ),
         FFRoute(
@@ -122,7 +129,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: '/editProfile0127',
           builder: (context, params) => EditProfile0127Widget(
             userProfile: params.getParam(
-                'userProfile', ParamType.DocumentReference, false, ['users']),
+              'userProfile',
+              ParamType.DocumentReference,
+              false,
+              ['users'],
+            ),
           ),
         ),
         FFRoute(
@@ -134,11 +145,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'forgot0125',
           path: '/forgot0125',
           builder: (context, params) => Forgot0125Widget(),
-        ),
-        FFRoute(
-          name: 'attendance0125',
-          path: '/attendance0125',
-          builder: (context, params) => Attendance0125Widget(),
         ),
         FFRoute(
           name: 'shoppinglist0126',
@@ -206,7 +212,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => params.isEmpty
               ? NavBarPage(initialPage: 'basket0203')
               : Basket0203Widget(
-                  cost: params.getParam('cost', ParamType.String),
+                  cost: params.getParam(
+                    'cost',
+                    ParamType.String,
+                  ),
                 ),
         ),
         FFRoute(
@@ -223,6 +232,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'uploadTransport0318',
           path: '/uploadTransport0318',
           builder: (context, params) => UploadTransport0318Widget(),
+        ),
+        FFRoute(
+          name: 'attendance0125',
+          path: '/attendance0125',
+          builder: (context, params) => Attendance0125Widget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -355,8 +369,12 @@ class FFParameters {
       return param;
     }
     // Return serialized value.
-    return deserializeParam<T>(param, type, isList,
-        collectionNamePath: collectionNamePath);
+    return deserializeParam<T>(
+      param,
+      type,
+      isList,
+      collectionNamePath: collectionNamePath,
+    );
   }
 }
 

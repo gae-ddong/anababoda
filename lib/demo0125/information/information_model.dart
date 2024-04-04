@@ -34,8 +34,6 @@ class InformationModel extends FlutterFlowModel<InformationWidget> {
   TextEditingController? yourTitleAccoountController;
   String? Function(BuildContext, String?)? yourTitleAccoountControllerValidator;
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -51,8 +49,4 @@ class InformationModel extends FlutterFlowModel<InformationWidget> {
     yourTitleAccoountFocusNode?.dispose();
     yourTitleAccoountController?.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

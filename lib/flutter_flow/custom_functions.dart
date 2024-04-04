@@ -34,7 +34,7 @@ int checkAttendance(
   int num,
 ) {
   int rest = 0;
-  for (int i = 0; i <= (7 - num); i++) {
+  for (int i = 0; i < (7 - num); i++) {
     rest = checkdate % 2;
     checkdate = checkdate ~/ 2;
   }
@@ -42,32 +42,19 @@ int checkAttendance(
 }
 
 bool costCounting(String cost) {
-  List<String> parts = cost.split(', ');
+  RegExp regExp = RegExp(r'\d+');
+  Iterable<Match> matches = regExp.allMatches(cost);
+  int largestNumber = 0; // 가장 큰 숫자를 저장할 변수 초기화
 
-  List<num?> numbers = parts
-      .map((String part) {
-        try {
-          return num.parse(part);
-        } catch (e) {
-          // If parsing fails, return null
-          return null;
-        }
-      })
-      .where((num? number) => number != null)
-      .toList(); // Filtering out nulls
+  matches.forEach((match) {
+    String? num = match.group(0);
+    int parsedNum = int.parse(num!);
+    if (parsedNum > largestNumber) {
+      largestNumber = parsedNum; // 현재 추출한 숫자가 가장 큰 숫자라면 업데이트
+    }
+  });
 
-  num? maxValue;
-
-  if (numbers.isEmpty || numbers.every((element) => element == null)) {
-    maxValue =
-        null; // Return null if the list is empty or contains only null values
-  }
-
-  // Using reduce to find the maximum value
-  maxValue = numbers.whereType<num>().reduce(
-      (currentMax, number) => currentMax > number ? currentMax : number);
-
-  if (maxValue > 1000) {
+  if (largestNumber > 1000) {
     return true;
   } else {
     return false;
@@ -80,4 +67,28 @@ bool? checkDate(DateTime time) {
   if (today.difference(time).inDays > 1) return true;
 
   return false;
+}
+
+int absDate(
+  DateTime currDate,
+  DateTime startDate,
+) {
+  Duration difference = currDate.difference(startDate).abs();
+  return difference.inDays;
+}
+
+int updateDatetime(int num) {
+  int sum = 1;
+
+  for (int i = 0; i < 6 - num; i++) {
+    sum = sum * 2;
+  }
+  return sum;
+}
+
+int add(
+  int abs,
+  int k,
+) {
+  return abs + k;
 }

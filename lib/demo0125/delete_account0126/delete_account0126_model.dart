@@ -20,8 +20,6 @@ class DeleteAccount0126Model extends FlutterFlowModel<DeleteAccount0126Widget> {
   // State field(s) for Checkbox widget.
   bool? checkboxValue;
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -30,8 +28,4 @@ class DeleteAccount0126Model extends FlutterFlowModel<DeleteAccount0126Widget> {
     currentPasswordFocusNode?.dispose();
     currentPasswordController?.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

@@ -71,6 +71,7 @@ class _UploadTumblr0126WidgetState extends State<UploadTumblr0126Widget> {
                   fontFamily: FlutterFlowTheme.of(context).headlineMediumFamily,
                   color: Colors.white,
                   fontSize: 22.0,
+                  letterSpacing: 0.0,
                   fontWeight: FontWeight.normal,
                   useGoogleFonts: GoogleFonts.asMap().containsKey(
                       FlutterFlowTheme.of(context).headlineMediumFamily),
@@ -154,6 +155,7 @@ class _UploadTumblr0126WidgetState extends State<UploadTumblr0126Widget> {
                                     fontFamily: FlutterFlowTheme.of(context)
                                         .bodyMediumFamily,
                                     color: Color(0xFF435F23),
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
@@ -168,7 +170,16 @@ class _UploadTumblr0126WidgetState extends State<UploadTumblr0126Widget> {
                               style: TextStyle(),
                             )
                           ],
-                          style: FlutterFlowTheme.of(context).bodyMedium,
+                          style: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .bodyMediumFamily,
+                                letterSpacing: 0.0,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .bodyMediumFamily),
+                              ),
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -216,6 +227,7 @@ class _UploadTumblr0126WidgetState extends State<UploadTumblr0126Widget> {
                                       fontFamily: FlutterFlowTheme.of(context)
                                           .bodyMediumFamily,
                                       color: Color(0xFF435F23),
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.bold,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
@@ -230,7 +242,16 @@ class _UploadTumblr0126WidgetState extends State<UploadTumblr0126Widget> {
                                 style: TextStyle(),
                               )
                             ],
-                            style: FlutterFlowTheme.of(context).bodyMedium,
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .bodyMediumFamily,
+                                  letterSpacing: 0.0,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily),
+                                ),
                           ),
                           textAlign: TextAlign.center,
                         ),
@@ -268,6 +289,7 @@ class _UploadTumblr0126WidgetState extends State<UploadTumblr0126Widget> {
                               FlutterFlowTheme.of(context).titleSmallFamily,
                           color: Colors.white,
                           fontSize: 14.0,
+                          letterSpacing: 0.0,
                           useGoogleFonts: GoogleFonts.asMap().containsKey(
                               FlutterFlowTheme.of(context).titleSmallFamily),
                         ),
@@ -299,6 +321,7 @@ class _UploadTumblr0126WidgetState extends State<UploadTumblr0126Widget> {
                               FlutterFlowTheme.of(context).titleSmallFamily,
                           color: Colors.white,
                           fontSize: 14.0,
+                          letterSpacing: 0.0,
                           useGoogleFonts: GoogleFonts.asMap().containsKey(
                               FlutterFlowTheme.of(context).titleSmallFamily),
                         ),
@@ -340,6 +363,7 @@ class _UploadTumblr0126WidgetState extends State<UploadTumblr0126Widget> {
                               FlutterFlowTheme.of(context).bodyMediumFamily,
                           color: Color(0xFF435F23),
                           fontSize: 15.0,
+                          letterSpacing: 0.0,
                           fontWeight: FontWeight.w600,
                           useGoogleFonts: GoogleFonts.asMap().containsKey(
                               FlutterFlowTheme.of(context).bodyMediumFamily),
@@ -356,6 +380,7 @@ class _UploadTumblr0126WidgetState extends State<UploadTumblr0126Widget> {
                             fontFamily:
                                 FlutterFlowTheme.of(context).bodyMediumFamily,
                             fontSize: 15.0,
+                            letterSpacing: 0.0,
                             useGoogleFonts: GoogleFonts.asMap().containsKey(
                                 FlutterFlowTheme.of(context).bodyMediumFamily),
                           ),

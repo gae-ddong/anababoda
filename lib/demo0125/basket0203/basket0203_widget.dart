@@ -62,6 +62,7 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                   fontFamily: FlutterFlowTheme.of(context).headlineMediumFamily,
                   color: Colors.white,
                   fontSize: 22.0,
+                  letterSpacing: 0.0,
                   useGoogleFonts: GoogleFonts.asMap().containsKey(
                       FlutterFlowTheme.of(context).headlineMediumFamily),
                 ),
@@ -153,7 +154,19 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                                         ),
                                         textAlign: TextAlign.justify,
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMediumFamily,
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: GoogleFonts
+                                                      .asMap()
+                                                  .containsKey(
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMediumFamily),
+                                            ),
                                       ),
                                       Text(
                                         FFLocalizations.of(context).getText(
@@ -166,6 +179,7 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMediumFamily,
                                               fontSize: 17.0,
+                                              letterSpacing: 0.0,
                                               fontWeight: FontWeight.w600,
                                               useGoogleFonts: GoogleFonts
                                                       .asMap()
@@ -180,7 +194,19 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                                           'ecdj9rbj' /* 수량 1개 */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMediumFamily,
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: GoogleFonts
+                                                      .asMap()
+                                                  .containsKey(
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMediumFamily),
+                                            ),
                                       ),
                                       Container(
                                         width: 200.0,
@@ -209,6 +235,7 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                                                                     context)
                                                                 .bodyMediumFamily,
                                                         fontSize: 17.0,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w600,
                                                         useGoogleFonts: GoogleFonts
@@ -233,6 +260,7 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                                                                     context)
                                                                 .bodyMediumFamily,
                                                         fontSize: 17.0,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w600,
                                                         useGoogleFonts: GoogleFonts
@@ -331,7 +359,19 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                                         ),
                                         textAlign: TextAlign.justify,
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMediumFamily,
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: GoogleFonts
+                                                      .asMap()
+                                                  .containsKey(
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMediumFamily),
+                                            ),
                                       ),
                                       Text(
                                         FFLocalizations.of(context).getText(
@@ -344,6 +384,7 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMediumFamily,
                                               fontSize: 17.0,
+                                              letterSpacing: 0.0,
                                               fontWeight: FontWeight.w600,
                                               useGoogleFonts: GoogleFonts
                                                       .asMap()
@@ -358,7 +399,19 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                                           '2ap4eus2' /* 수량 1개 */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMediumFamily,
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: GoogleFonts
+                                                      .asMap()
+                                                  .containsKey(
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMediumFamily),
+                                            ),
                                       ),
                                       Container(
                                         width: 200.0,
@@ -387,6 +440,7 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                                                                     context)
                                                                 .bodyMediumFamily,
                                                         fontSize: 17.0,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w600,
                                                         useGoogleFonts: GoogleFonts
@@ -411,6 +465,7 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                                                                     context)
                                                                 .bodyMediumFamily,
                                                         fontSize: 17.0,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w600,
                                                         useGoogleFonts: GoogleFonts
@@ -473,6 +528,7 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                                       fontFamily: FlutterFlowTheme.of(context)
                                           .bodyMediumFamily,
                                       fontSize: 18.0,
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.w600,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
@@ -495,7 +551,17 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                               FFLocalizations.of(context).getText(
                                 'evdpm0xn' /* 상품 금액 */,
                               ),
-                              style: FlutterFlowTheme.of(context).bodyMedium,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: FlutterFlowTheme.of(context)
+                                        .bodyMediumFamily,
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyMediumFamily),
+                                  ),
                             ),
                             Row(
                               mainAxisSize: MainAxisSize.max,
@@ -509,6 +575,7 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                                       .override(
                                         fontFamily: FlutterFlowTheme.of(context)
                                             .bodyMediumFamily,
+                                        letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
@@ -525,6 +592,7 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                                       .override(
                                         fontFamily: FlutterFlowTheme.of(context)
                                             .bodyMediumFamily,
+                                        letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
@@ -548,7 +616,17 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                               FFLocalizations.of(context).getText(
                                 'zp3b1u1z' /* 할인 금액 예상  */,
                               ),
-                              style: FlutterFlowTheme.of(context).bodyMedium,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: FlutterFlowTheme.of(context)
+                                        .bodyMediumFamily,
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyMediumFamily),
+                                  ),
                             ),
                             Row(
                               mainAxisSize: MainAxisSize.max,
@@ -564,6 +642,7 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                                             .bodyMediumFamily,
                                         color:
                                             FlutterFlowTheme.of(context).info,
+                                        letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
@@ -587,6 +666,7 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                                                   .bodyMediumFamily,
                                           color:
                                               FlutterFlowTheme.of(context).info,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(
@@ -606,6 +686,7 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                                             .bodyMediumFamily,
                                         color:
                                             FlutterFlowTheme.of(context).info,
+                                        letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
@@ -629,7 +710,17 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                               FFLocalizations.of(context).getText(
                                 'vmnsjvgk' /* 보유 발자국 사용 */,
                               ),
-                              style: FlutterFlowTheme.of(context).bodyMedium,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: FlutterFlowTheme.of(context)
+                                        .bodyMediumFamily,
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyMediumFamily),
+                                  ),
                             ),
                             FFButtonWidget(
                               onPressed: () async {
@@ -661,6 +752,7 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                                           .titleSmallFamily,
                                       color: Colors.white,
                                       fontSize: 14.0,
+                                      letterSpacing: 0.0,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
                                               FlutterFlowTheme.of(context)
@@ -694,6 +786,7 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                                     fontFamily: FlutterFlowTheme.of(context)
                                         .bodyMediumFamily,
                                     fontSize: 15.0,
+                                    letterSpacing: 0.0,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
                                             FlutterFlowTheme.of(context)
@@ -718,6 +811,7 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                                               FlutterFlowTheme.of(context)
                                                   .bodyMediumFamily,
                                           fontSize: 15.0,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(
@@ -736,6 +830,7 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                                         fontFamily: FlutterFlowTheme.of(context)
                                             .bodyMediumFamily,
                                         fontSize: 15.0,
+                                        letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
@@ -807,6 +902,7 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                                   color: FlutterFlowTheme.of(context)
                                       .primaryBackground,
                                   fontSize: 18.0,
+                                  letterSpacing: 0.0,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
                                           .bodyMediumFamily),
@@ -825,6 +921,7 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                                 color: FlutterFlowTheme.of(context)
                                     .primaryBackground,
                                 fontSize: 18.0,
+                                letterSpacing: 0.0,
                                 useGoogleFonts: GoogleFonts.asMap().containsKey(
                                     FlutterFlowTheme.of(context)
                                         .bodyMediumFamily),

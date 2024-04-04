@@ -98,7 +98,14 @@ class _Forgot0125WidgetState extends State<Forgot0125Widget> {
                         FFLocalizations.of(context).getText(
                           'imv2qbyh' /* Back */,
                         ),
-                        style: FlutterFlowTheme.of(context).bodyMedium,
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).bodyMediumFamily,
+                              letterSpacing: 0.0,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context)
+                                      .bodyMediumFamily),
+                            ),
                       ),
                     ),
                   ],
@@ -114,6 +121,7 @@ class _Forgot0125WidgetState extends State<Forgot0125Widget> {
                       fontFamily:
                           FlutterFlowTheme.of(context).headlineMediumFamily,
                       color: Color(0xFF435F23),
+                      letterSpacing: 0.0,
                       useGoogleFonts: GoogleFonts.asMap().containsKey(
                           FlutterFlowTheme.of(context).headlineMediumFamily),
                     ),
@@ -125,7 +133,13 @@ class _Forgot0125WidgetState extends State<Forgot0125Widget> {
                 FFLocalizations.of(context).getText(
                   'gjjhtnvy' /* 비밀번호를 재설정할 수 있는 링크가 포함된 이메일을 보... */,
                 ),
-                style: FlutterFlowTheme.of(context).labelMedium,
+                style: FlutterFlowTheme.of(context).labelMedium.override(
+                      fontFamily:
+                          FlutterFlowTheme.of(context).labelMediumFamily,
+                      letterSpacing: 0.0,
+                      useGoogleFonts: GoogleFonts.asMap().containsKey(
+                          FlutterFlowTheme.of(context).labelMediumFamily),
+                    ),
               ),
             ),
             Padding(
@@ -141,11 +155,27 @@ class _Forgot0125WidgetState extends State<Forgot0125Widget> {
                     labelText: FFLocalizations.of(context).getText(
                       '7lop81el' /* Your email address... */,
                     ),
-                    labelStyle: FlutterFlowTheme.of(context).labelMedium,
+                    labelStyle: FlutterFlowTheme.of(context)
+                        .labelMedium
+                        .override(
+                          fontFamily:
+                              FlutterFlowTheme.of(context).labelMediumFamily,
+                          letterSpacing: 0.0,
+                          useGoogleFonts: GoogleFonts.asMap().containsKey(
+                              FlutterFlowTheme.of(context).labelMediumFamily),
+                        ),
                     hintText: FFLocalizations.of(context).getText(
                       'ek93rgwu' /* Enter your email... */,
                     ),
-                    hintStyle: FlutterFlowTheme.of(context).labelMedium,
+                    hintStyle: FlutterFlowTheme.of(context)
+                        .labelMedium
+                        .override(
+                          fontFamily:
+                              FlutterFlowTheme.of(context).labelMediumFamily,
+                          letterSpacing: 0.0,
+                          useGoogleFonts: GoogleFonts.asMap().containsKey(
+                              FlutterFlowTheme.of(context).labelMediumFamily),
+                        ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
                         color: FlutterFlowTheme.of(context).alternate,
@@ -179,8 +209,15 @@ class _Forgot0125WidgetState extends State<Forgot0125Widget> {
                     contentPadding:
                         EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 20.0, 24.0),
                   ),
-                  style: FlutterFlowTheme.of(context).bodyMedium,
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        fontFamily:
+                            FlutterFlowTheme.of(context).bodyMediumFamily,
+                        letterSpacing: 0.0,
+                        useGoogleFonts: GoogleFonts.asMap().containsKey(
+                            FlutterFlowTheme.of(context).bodyMediumFamily),
+                      ),
                   maxLines: null,
+                  minLines: null,
                   keyboardType: TextInputType.emailAddress,
                   cursorColor: FlutterFlowTheme.of(context).primary,
                   validator: _model.emailAddressControllerValidator
@@ -219,7 +256,13 @@ class _Forgot0125WidgetState extends State<Forgot0125Widget> {
                     iconPadding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: Color(0xFF435F23),
-                    textStyle: FlutterFlowTheme.of(context).titleSmall,
+                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                          fontFamily:
+                              FlutterFlowTheme.of(context).titleSmallFamily,
+                          letterSpacing: 0.0,
+                          useGoogleFonts: GoogleFonts.asMap().containsKey(
+                              FlutterFlowTheme.of(context).titleSmallFamily),
+                        ),
                     elevation: 3.0,
                     borderSide: BorderSide(
                       color: Colors.transparent,

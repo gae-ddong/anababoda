@@ -23,8 +23,6 @@ class Giftcertificate0127Model
   // State field(s) for CheckboxListTile widget.
   bool? checkboxListTileValue2;
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -32,8 +30,4 @@ class Giftcertificate0127Model
   void dispose() {
     tabBarController?.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

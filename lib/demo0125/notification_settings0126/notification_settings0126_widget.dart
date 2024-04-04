@@ -71,6 +71,7 @@ class _NotificationSettings0126WidgetState
                   fontFamily: FlutterFlowTheme.of(context).headlineMediumFamily,
                   color: Colors.white,
                   fontSize: 22.0,
+                  letterSpacing: 0.0,
                   fontWeight: FontWeight.normal,
                   useGoogleFonts: GoogleFonts.asMap().containsKey(
                       FlutterFlowTheme.of(context).headlineMediumFamily),
@@ -115,6 +116,7 @@ class _NotificationSettings0126WidgetState
               style: FlutterFlowTheme.of(context).titleLarge.override(
                     fontFamily: FlutterFlowTheme.of(context).titleLargeFamily,
                     fontSize: 15.0,
+                    letterSpacing: 0.0,
                     useGoogleFonts: GoogleFonts.asMap().containsKey(
                         FlutterFlowTheme.of(context).titleLargeFamily),
                   ),
@@ -123,7 +125,12 @@ class _NotificationSettings0126WidgetState
               FFLocalizations.of(context).getText(
                 'tnh16rv4' /* 알림 > 알림 설정에서 변경 가능 */,
               ),
-              style: FlutterFlowTheme.of(context).labelMedium,
+              style: FlutterFlowTheme.of(context).labelMedium.override(
+                    fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
+                    letterSpacing: 0.0,
+                    useGoogleFonts: GoogleFonts.asMap().containsKey(
+                        FlutterFlowTheme.of(context).labelMediumFamily),
+                  ),
             ),
             tileColor: FlutterFlowTheme.of(context).secondaryBackground,
             activeColor: Color(0xFF435F23),
@@ -143,6 +150,7 @@ class _NotificationSettings0126WidgetState
               style: FlutterFlowTheme.of(context).titleLarge.override(
                     fontFamily: FlutterFlowTheme.of(context).titleLargeFamily,
                     fontSize: 15.0,
+                    letterSpacing: 0.0,
                     useGoogleFonts: GoogleFonts.asMap().containsKey(
                         FlutterFlowTheme.of(context).titleLargeFamily),
                   ),
@@ -151,7 +159,12 @@ class _NotificationSettings0126WidgetState
               FFLocalizations.of(context).getText(
                 'z21zqksi' /* 앱 공지사항을 기기를 통해 전달합니다. */,
               ),
-              style: FlutterFlowTheme.of(context).labelMedium,
+              style: FlutterFlowTheme.of(context).labelMedium.override(
+                    fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
+                    letterSpacing: 0.0,
+                    useGoogleFonts: GoogleFonts.asMap().containsKey(
+                        FlutterFlowTheme.of(context).labelMediumFamily),
+                  ),
             ),
             tileColor: FlutterFlowTheme.of(context).secondaryBackground,
             activeColor: Color(0xFF435F23),
@@ -171,6 +184,7 @@ class _NotificationSettings0126WidgetState
               style: FlutterFlowTheme.of(context).titleLarge.override(
                     fontFamily: FlutterFlowTheme.of(context).titleLargeFamily,
                     fontSize: 15.0,
+                    letterSpacing: 0.0,
                     useGoogleFonts: GoogleFonts.asMap().containsKey(
                         FlutterFlowTheme.of(context).titleLargeFamily),
                   ),
@@ -179,7 +193,12 @@ class _NotificationSettings0126WidgetState
               FFLocalizations.of(context).getText(
                 '2om9o7tw' /* 상품 광고 및 이벤트를 기기를 통해 전달합니다. */,
               ),
-              style: FlutterFlowTheme.of(context).labelMedium,
+              style: FlutterFlowTheme.of(context).labelMedium.override(
+                    fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
+                    letterSpacing: 0.0,
+                    useGoogleFonts: GoogleFonts.asMap().containsKey(
+                        FlutterFlowTheme.of(context).labelMediumFamily),
+                  ),
             ),
             tileColor: FlutterFlowTheme.of(context).secondaryBackground,
             activeColor: Color(0xFF435F23),

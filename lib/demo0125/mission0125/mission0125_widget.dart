@@ -68,6 +68,7 @@ class _Mission0125WidgetState extends State<Mission0125Widget> {
                 fontFamily: FlutterFlowTheme.of(context).headlineMediumFamily,
                 color: Colors.white,
                 fontSize: 22.0,
+                letterSpacing: 0.0,
                 fontWeight: FontWeight.w500,
                 useGoogleFonts: GoogleFonts.asMap().containsKey(
                     FlutterFlowTheme.of(context).headlineMediumFamily),
@@ -109,6 +110,7 @@ class _Mission0125WidgetState extends State<Mission0125Widget> {
                               fontFamily:
                                   FlutterFlowTheme.of(context).bodyMediumFamily,
                               color: FlutterFlowTheme.of(context).textColor,
+                              letterSpacing: 0.0,
                               useGoogleFonts: GoogleFonts.asMap().containsKey(
                                   FlutterFlowTheme.of(context)
                                       .bodyMediumFamily),
@@ -142,6 +144,7 @@ class _Mission0125WidgetState extends State<Mission0125Widget> {
                                         color: FlutterFlowTheme.of(context)
                                             .textColor,
                                         fontSize: 36.0,
+                                        letterSpacing: 0.0,
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
                                                 FlutterFlowTheme.of(context)
@@ -161,6 +164,7 @@ class _Mission0125WidgetState extends State<Mission0125Widget> {
                                   fontFamily: FlutterFlowTheme.of(context)
                                       .headlineSmallFamily,
                                   color: FlutterFlowTheme.of(context).textColor,
+                                  letterSpacing: 0.0,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
                                           .headlineSmallFamily),
@@ -225,6 +229,7 @@ class _Mission0125WidgetState extends State<Mission0125Widget> {
                                   .override(
                                     fontFamily: 'gowum',
                                     fontSize: 15.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey('gowum'),
@@ -239,6 +244,7 @@ class _Mission0125WidgetState extends State<Mission0125Widget> {
                                   .override(
                                     fontFamily: 'gowum',
                                     fontSize: 20.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w600,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey('gowum'),
@@ -391,6 +397,7 @@ class _Mission0125WidgetState extends State<Mission0125Widget> {
                                         .override(
                                           fontFamily: 'gowum',
                                           fontSize: 15.0,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.w500,
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey('gowum'),
@@ -406,6 +413,7 @@ class _Mission0125WidgetState extends State<Mission0125Widget> {
                                       .override(
                                         fontFamily: 'gowum',
                                         fontSize: 20.0,
+                                        letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey('gowum'),
@@ -482,6 +490,7 @@ class _Mission0125WidgetState extends State<Mission0125Widget> {
                                   .override(
                                     fontFamily: 'gowum',
                                     fontSize: 15.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey('gowum'),
@@ -496,6 +505,7 @@ class _Mission0125WidgetState extends State<Mission0125Widget> {
                                   .override(
                                     fontFamily: 'gowum',
                                     fontSize: 20.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w600,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey('gowum'),
@@ -570,6 +580,7 @@ class _Mission0125WidgetState extends State<Mission0125Widget> {
                                   .override(
                                     fontFamily: 'gowum',
                                     fontSize: 15.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey('gowum'),
@@ -584,6 +595,7 @@ class _Mission0125WidgetState extends State<Mission0125Widget> {
                                   .override(
                                     fontFamily: 'gowum',
                                     fontSize: 20.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w600,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey('gowum'),

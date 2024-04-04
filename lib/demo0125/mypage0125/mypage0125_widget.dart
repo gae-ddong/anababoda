@@ -60,7 +60,10 @@ class _Mypage0125WidgetState extends State<Mypage0125Widget> {
                   BoxShadow(
                     blurRadius: 6.0,
                     color: Color(0x4B1A1F24),
-                    offset: Offset(0.0, 2.0),
+                    offset: Offset(
+                      0.0,
+                      2.0,
+                    ),
                   )
                 ],
                 borderRadius: BorderRadius.circular(0.0),
@@ -107,6 +110,7 @@ class _Mypage0125WidgetState extends State<Mypage0125Widget> {
                                   fontFamily: FlutterFlowTheme.of(context)
                                       .headlineSmallFamily,
                                   color: FlutterFlowTheme.of(context).textColor,
+                                  letterSpacing: 0.0,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
                                           .headlineSmallFamily),
@@ -199,6 +203,7 @@ class _Mypage0125WidgetState extends State<Mypage0125Widget> {
                                         fontFamily: FlutterFlowTheme.of(context)
                                             .bodyMediumFamily,
                                         fontSize: 20.0,
+                                        letterSpacing: 0.0,
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
                                                 FlutterFlowTheme.of(context)
@@ -230,6 +235,7 @@ class _Mypage0125WidgetState extends State<Mypage0125Widget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMediumFamily,
                                               fontSize: 17.0,
+                                              letterSpacing: 0.0,
                                               fontWeight: FontWeight.w600,
                                               useGoogleFonts: GoogleFonts
                                                       .asMap()
@@ -252,6 +258,7 @@ class _Mypage0125WidgetState extends State<Mypage0125Widget> {
                                               FlutterFlowTheme.of(context)
                                                   .bodyMediumFamily,
                                           fontSize: 17.0,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(
@@ -306,6 +313,7 @@ class _Mypage0125WidgetState extends State<Mypage0125Widget> {
                                         fontFamily: FlutterFlowTheme.of(context)
                                             .bodyMediumFamily,
                                         fontSize: 20.0,
+                                        letterSpacing: 0.0,
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
                                                 FlutterFlowTheme.of(context)
@@ -336,6 +344,7 @@ class _Mypage0125WidgetState extends State<Mypage0125Widget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMediumFamily,
                                               fontSize: 17.0,
+                                              letterSpacing: 0.0,
                                               fontWeight: FontWeight.w600,
                                               useGoogleFonts: GoogleFonts
                                                       .asMap()
@@ -358,6 +367,7 @@ class _Mypage0125WidgetState extends State<Mypage0125Widget> {
                                               FlutterFlowTheme.of(context)
                                                   .bodyMediumFamily,
                                           fontSize: 17.0,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(
@@ -417,7 +427,16 @@ class _Mypage0125WidgetState extends State<Mypage0125Widget> {
                             FFLocalizations.of(context).getText(
                               'i61y9ibx' /* 프로필 설정 */,
                             ),
-                            style: FlutterFlowTheme.of(context).bodyMedium,
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .bodyMediumFamily,
+                                  letterSpacing: 0.0,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily),
+                                ),
                           ),
                           FlutterFlowIconButton(
                             borderColor: Colors.transparent,
@@ -482,7 +501,17 @@ class _Mypage0125WidgetState extends State<Mypage0125Widget> {
                               FFLocalizations.of(context).getText(
                                 '03k0vw86' /* 비밀번호 변경 */,
                               ),
-                              style: FlutterFlowTheme.of(context).bodyMedium,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: FlutterFlowTheme.of(context)
+                                        .bodyMediumFamily,
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyMediumFamily),
+                                  ),
                             ),
                             FlutterFlowIconButton(
                               borderColor: Colors.transparent,
@@ -548,7 +577,17 @@ class _Mypage0125WidgetState extends State<Mypage0125Widget> {
                               FFLocalizations.of(context).getText(
                                 '6w6wv95p' /* 알림설정 */,
                               ),
-                              style: FlutterFlowTheme.of(context).bodyMedium,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: FlutterFlowTheme.of(context)
+                                        .bodyMediumFamily,
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyMediumFamily),
+                                  ),
                             ),
                             FlutterFlowIconButton(
                               borderColor: Colors.transparent,
@@ -614,7 +653,17 @@ class _Mypage0125WidgetState extends State<Mypage0125Widget> {
                               FFLocalizations.of(context).getText(
                                 '9aogde79' /* 회원탈퇴 */,
                               ),
-                              style: FlutterFlowTheme.of(context).bodyMedium,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: FlutterFlowTheme.of(context)
+                                        .bodyMediumFamily,
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyMediumFamily),
+                                  ),
                             ),
                             FlutterFlowIconButton(
                               borderColor: Colors.transparent,

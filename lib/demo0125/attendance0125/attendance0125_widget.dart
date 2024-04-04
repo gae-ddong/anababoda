@@ -100,13 +100,14 @@ class _Attendance0125WidgetState extends State<Attendance0125Widget> {
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
-                    '10w1u00g' /* 오늘의 발자국 */,
+                    'xjwfd4tr' /* 오늘의 발자국 */,
                   ),
                   style: FlutterFlowTheme.of(context).headlineMedium.override(
                         fontFamily:
                             FlutterFlowTheme.of(context).headlineMediumFamily,
                         color: Colors.white,
                         fontSize: 22.0,
+                        letterSpacing: 0.0,
                         fontWeight: FontWeight.normal,
                         useGoogleFonts: GoogleFonts.asMap().containsKey(
                             FlutterFlowTheme.of(context).headlineMediumFamily),
@@ -152,125 +153,171 @@ class _Attendance0125WidgetState extends State<Attendance0125Widget> {
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 10.0, 10.0, 10.0),
-                            child: FFButtonWidget(
-                              onPressed: (_model.count != 0)
-                                  ? null
-                                  : () {
-                                      print('Button pressed ...');
-                                    },
-                              text: FFLocalizations.of(context).getText(
-                                'wilm0w0k' /* 1일차 */,
-                              ),
-                              options: FFButtonOptions(
-                                width: 50.0,
-                                height: 50.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                color: Color(0xFF435F23),
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .titleSmall
-                                    .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .titleSmallFamily,
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryBackground,
-                                      fontSize: 15.0,
-                                      useGoogleFonts: GoogleFonts.asMap()
-                                          .containsKey(
-                                              FlutterFlowTheme.of(context)
-                                                  .titleSmallFamily),
-                                    ),
-                                elevation: 20.0,
-                                borderSide: BorderSide(
-                                  color: Color(0xFF848F70),
-                                  width: 2.0,
+                            child: AuthUserStreamWidget(
+                              builder: (context) => FFButtonWidget(
+                                onPressed: (functions
+                                            .checkAttendance(
+                                                valueOrDefault(
+                                                    currentUserDocument
+                                                        ?.dateCheck,
+                                                    0),
+                                                0)
+                                            .toString() !=
+                                        '0')
+                                    ? null
+                                    : () {
+                                        print('Button pressed ...');
+                                      },
+                                text: FFLocalizations.of(context).getText(
+                                  '3xcep7cq' /* 1일차 */,
                                 ),
-                                borderRadius: BorderRadius.circular(24.0),
-                                disabledColor: Color(0xFFAAB0A2),
-                                disabledTextColor: FlutterFlowTheme.of(context)
-                                    .primaryBackground,
+                                options: FFButtonOptions(
+                                  width: 50.0,
+                                  height: 50.0,
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 0.0),
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 0.0),
+                                  color: Color(0xFFAAB0A2),
+                                  textStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .override(
+                                        fontFamily: FlutterFlowTheme.of(context)
+                                            .titleSmallFamily,
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryBackground,
+                                        fontSize: 15.0,
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .titleSmallFamily),
+                                      ),
+                                  elevation: 20.0,
+                                  borderSide: BorderSide(
+                                    color: Color(0xFF848F70),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(24.0),
+                                  disabledColor: Color(0xFF435F23),
+                                  disabledTextColor:
+                                      FlutterFlowTheme.of(context)
+                                          .primaryBackground,
+                                ),
                               ),
                             ),
                           ),
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 10.0, 10.0, 10.0),
-                            child: FFButtonWidget(
-                              onPressed: (_model.count != 1)
-                                  ? null
-                                  : () {
-                                      print('Button pressed ...');
-                                    },
-                              text: FFLocalizations.of(context).getText(
-                                '594kbn60' /* 2일차 */,
-                              ),
-                              options: FFButtonOptions(
-                                width: 50.0,
-                                height: 50.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                color: Color(0xFF435F23),
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .titleSmall
-                                    .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .titleSmallFamily,
-                                      color: Color(0xFFAAB0A2),
-                                      fontSize: 15.0,
-                                      useGoogleFonts: GoogleFonts.asMap()
-                                          .containsKey(
-                                              FlutterFlowTheme.of(context)
-                                                  .titleSmallFamily),
-                                    ),
-                                borderSide: BorderSide(
-                                  color: Color(0xFF7C826C),
-                                  width: 2.0,
+                            child: AuthUserStreamWidget(
+                              builder: (context) => FFButtonWidget(
+                                onPressed: (functions
+                                            .checkAttendance(
+                                                valueOrDefault(
+                                                    currentUserDocument
+                                                        ?.dateCheck,
+                                                    0),
+                                                1)
+                                            .toString() !=
+                                        '0')
+                                    ? null
+                                    : () {
+                                        print('Button pressed ...');
+                                      },
+                                text: FFLocalizations.of(context).getText(
+                                  'isg2af0z' /* 2일차 */,
                                 ),
-                                borderRadius: BorderRadius.circular(24.0),
+                                options: FFButtonOptions(
+                                  width: 50.0,
+                                  height: 50.0,
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 0.0),
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 0.0),
+                                  color: Color(0xFFAAB0A2),
+                                  textStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .override(
+                                        fontFamily: FlutterFlowTheme.of(context)
+                                            .titleSmallFamily,
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryBackground,
+                                        fontSize: 15.0,
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .titleSmallFamily),
+                                      ),
+                                  elevation: 20.0,
+                                  borderSide: BorderSide(
+                                    color: Color(0xFF848F70),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(24.0),
+                                  disabledColor: Color(0xFF435F23),
+                                  disabledTextColor:
+                                      FlutterFlowTheme.of(context)
+                                          .primaryBackground,
+                                ),
                               ),
                             ),
                           ),
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 10.0, 10.0, 10.0),
-                            child: FFButtonWidget(
-                              onPressed: (_model.count != 2)
-                                  ? null
-                                  : () {
-                                      print('Button pressed ...');
-                                    },
-                              text: FFLocalizations.of(context).getText(
-                                '053fam6z' /* 3일차 */,
-                              ),
-                              options: FFButtonOptions(
-                                width: 50.0,
-                                height: 50.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                color: Color(0xFF435F23),
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .titleSmall
-                                    .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .titleSmallFamily,
-                                      color: Color(0xFFAAB0A2),
-                                      fontSize: 15.0,
-                                      useGoogleFonts: GoogleFonts.asMap()
-                                          .containsKey(
-                                              FlutterFlowTheme.of(context)
-                                                  .titleSmallFamily),
-                                    ),
-                                borderSide: BorderSide(
-                                  color: Color(0xFF7C826C),
-                                  width: 2.0,
+                            child: AuthUserStreamWidget(
+                              builder: (context) => FFButtonWidget(
+                                onPressed: (functions
+                                            .checkAttendance(
+                                                valueOrDefault(
+                                                    currentUserDocument
+                                                        ?.dateCheck,
+                                                    0),
+                                                2)
+                                            .toString() !=
+                                        '0')
+                                    ? null
+                                    : () {
+                                        print('Button pressed ...');
+                                      },
+                                text: FFLocalizations.of(context).getText(
+                                  'vme7pku7' /* 3일차 */,
                                 ),
-                                borderRadius: BorderRadius.circular(24.0),
+                                options: FFButtonOptions(
+                                  width: 50.0,
+                                  height: 50.0,
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 0.0),
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 0.0),
+                                  color: Color(0xFFAAB0A2),
+                                  textStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .override(
+                                        fontFamily: FlutterFlowTheme.of(context)
+                                            .titleSmallFamily,
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryBackground,
+                                        fontSize: 15.0,
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .titleSmallFamily),
+                                      ),
+                                  elevation: 20.0,
+                                  borderSide: BorderSide(
+                                    color: Color(0xFF848F70),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(24.0),
+                                  disabledColor: Color(0xFF435F23),
+                                  disabledTextColor:
+                                      FlutterFlowTheme.of(context)
+                                          .primaryBackground,
+                                ),
                               ),
                             ),
                           ),
@@ -286,233 +333,294 @@ class _Attendance0125WidgetState extends State<Attendance0125Widget> {
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   10.0, 10.0, 10.0, 10.0),
-                              child: FFButtonWidget(
-                                onPressed: (_model.count != 3)
-                                    ? null
-                                    : () {
-                                        print('Button pressed ...');
-                                      },
-                                text: FFLocalizations.of(context).getText(
-                                  '5jezp6lp' /* 4일차 */,
-                                ),
-                                options: FFButtonOptions(
-                                  width: 50.0,
-                                  height: 50.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  color: Color(0xFF435F23),
-                                  textStyle: FlutterFlowTheme.of(context)
-                                      .titleSmall
-                                      .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .titleSmallFamily,
-                                        color: Color(0xFFAAB0A2),
-                                        fontSize: 15.0,
-                                        useGoogleFonts: GoogleFonts.asMap()
-                                            .containsKey(
-                                                FlutterFlowTheme.of(context)
-                                                    .titleSmallFamily),
-                                      ),
-                                  borderSide: BorderSide(
-                                    color: Color(0xFF7C826C),
-                                    width: 2.0,
+                              child: AuthUserStreamWidget(
+                                builder: (context) => FFButtonWidget(
+                                  onPressed: (functions
+                                              .checkAttendance(
+                                                  valueOrDefault(
+                                                      currentUserDocument
+                                                          ?.dateCheck,
+                                                      0),
+                                                  3)
+                                              .toString() !=
+                                          '0')
+                                      ? null
+                                      : () {
+                                          print('Button pressed ...');
+                                        },
+                                  text: FFLocalizations.of(context).getText(
+                                    'iaut9klf' /* 4일차 */,
                                   ),
-                                  borderRadius: BorderRadius.circular(24.0),
+                                  options: FFButtonOptions(
+                                    width: 50.0,
+                                    height: 50.0,
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    color: Color(0xFFAAB0A2),
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .override(
+                                          fontFamily:
+                                              FlutterFlowTheme.of(context)
+                                                  .titleSmallFamily,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryBackground,
+                                          fontSize: 15.0,
+                                          letterSpacing: 0.0,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmallFamily),
+                                        ),
+                                    elevation: 20.0,
+                                    borderSide: BorderSide(
+                                      color: Color(0xFF848F70),
+                                      width: 2.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(24.0),
+                                    disabledColor: Color(0xFF435F23),
+                                    disabledTextColor:
+                                        FlutterFlowTheme.of(context)
+                                            .primaryBackground,
+                                  ),
                                 ),
                               ),
                             ),
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   10.0, 10.0, 10.0, 10.0),
-                              child: FFButtonWidget(
-                                onPressed: (_model.count != 4)
-                                    ? null
-                                    : () {
-                                        print('Button pressed ...');
-                                      },
-                                text: FFLocalizations.of(context).getText(
-                                  'p3od2ynd' /* 5일차 */,
-                                ),
-                                options: FFButtonOptions(
-                                  width: 50.0,
-                                  height: 50.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  color: Color(0xFF435F23),
-                                  textStyle: FlutterFlowTheme.of(context)
-                                      .titleSmall
-                                      .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .titleSmallFamily,
-                                        color: Color(0xFFAAB0A2),
-                                        fontSize: 15.0,
-                                        useGoogleFonts: GoogleFonts.asMap()
-                                            .containsKey(
-                                                FlutterFlowTheme.of(context)
-                                                    .titleSmallFamily),
-                                      ),
-                                  borderSide: BorderSide(
-                                    color: Color(0xFF7C826C),
-                                    width: 2.0,
+                              child: AuthUserStreamWidget(
+                                builder: (context) => FFButtonWidget(
+                                  onPressed: (functions
+                                              .checkAttendance(
+                                                  valueOrDefault(
+                                                      currentUserDocument
+                                                          ?.dateCheck,
+                                                      0),
+                                                  4)
+                                              .toString() !=
+                                          '0')
+                                      ? null
+                                      : () {
+                                          print('Button pressed ...');
+                                        },
+                                  text: FFLocalizations.of(context).getText(
+                                    'zjzc33gx' /* 5일차 */,
                                   ),
-                                  borderRadius: BorderRadius.circular(24.0),
+                                  options: FFButtonOptions(
+                                    width: 50.0,
+                                    height: 50.0,
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    color: Color(0xFFAAB0A2),
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .override(
+                                          fontFamily:
+                                              FlutterFlowTheme.of(context)
+                                                  .titleSmallFamily,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryBackground,
+                                          fontSize: 15.0,
+                                          letterSpacing: 0.0,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmallFamily),
+                                        ),
+                                    elevation: 20.0,
+                                    borderSide: BorderSide(
+                                      color: Color(0xFF848F70),
+                                      width: 2.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(24.0),
+                                    disabledColor: Color(0xFF435F23),
+                                    disabledTextColor:
+                                        FlutterFlowTheme.of(context)
+                                            .primaryBackground,
+                                  ),
                                 ),
                               ),
                             ),
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   10.0, 10.0, 10.0, 10.0),
-                              child: FFButtonWidget(
-                                onPressed: (_model.count != 5)
-                                    ? null
-                                    : () {
-                                        print('Button pressed ...');
-                                      },
-                                text: FFLocalizations.of(context).getText(
-                                  'cdl10yu9' /* 6일차 */,
-                                ),
-                                options: FFButtonOptions(
-                                  width: 50.0,
-                                  height: 50.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  color: Color(0xFF435F23),
-                                  textStyle: FlutterFlowTheme.of(context)
-                                      .titleSmall
-                                      .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .titleSmallFamily,
-                                        color: Color(0xFFAAB0A2),
-                                        fontSize: 15.0,
-                                        useGoogleFonts: GoogleFonts.asMap()
-                                            .containsKey(
-                                                FlutterFlowTheme.of(context)
-                                                    .titleSmallFamily),
-                                      ),
-                                  borderSide: BorderSide(
-                                    color: Color(0xFF7C826C),
-                                    width: 2.0,
+                              child: AuthUserStreamWidget(
+                                builder: (context) => FFButtonWidget(
+                                  onPressed: (functions
+                                              .checkAttendance(
+                                                  valueOrDefault(
+                                                      currentUserDocument
+                                                          ?.dateCheck,
+                                                      0),
+                                                  5)
+                                              .toString() !=
+                                          '0')
+                                      ? null
+                                      : () {
+                                          print('Button pressed ...');
+                                        },
+                                  text: FFLocalizations.of(context).getText(
+                                    'k5nz2uio' /* 6일차 */,
                                   ),
-                                  borderRadius: BorderRadius.circular(24.0),
+                                  options: FFButtonOptions(
+                                    width: 50.0,
+                                    height: 50.0,
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    color: Color(0xFFAAB0A2),
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .override(
+                                          fontFamily:
+                                              FlutterFlowTheme.of(context)
+                                                  .titleSmallFamily,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryBackground,
+                                          fontSize: 15.0,
+                                          letterSpacing: 0.0,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmallFamily),
+                                        ),
+                                    elevation: 20.0,
+                                    borderSide: BorderSide(
+                                      color: Color(0xFF848F70),
+                                      width: 2.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(24.0),
+                                    disabledColor: Color(0xFF435F23),
+                                    disabledTextColor:
+                                        FlutterFlowTheme.of(context)
+                                            .primaryBackground,
+                                  ),
                                 ),
                               ),
                             ),
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   10.0, 10.0, 10.0, 10.0),
-                              child: FFButtonWidget(
-                                onPressed: (_model.count != 6)
-                                    ? null
-                                    : () {
-                                        print('Button pressed ...');
-                                      },
-                                text: FFLocalizations.of(context).getText(
-                                  'qlys5j10' /* 7일차 */,
-                                ),
-                                options: FFButtonOptions(
-                                  width: 50.0,
-                                  height: 50.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  color: Color(0xFF435F23),
-                                  textStyle: FlutterFlowTheme.of(context)
-                                      .titleSmall
-                                      .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .titleSmallFamily,
-                                        color: Color(0xFFAAB0A2),
-                                        fontSize: 15.0,
-                                        useGoogleFonts: GoogleFonts.asMap()
-                                            .containsKey(
-                                                FlutterFlowTheme.of(context)
-                                                    .titleSmallFamily),
-                                      ),
-                                  borderSide: BorderSide(
-                                    color: Color(0xFF7C826C),
-                                    width: 2.0,
+                              child: AuthUserStreamWidget(
+                                builder: (context) => FFButtonWidget(
+                                  onPressed: (functions
+                                              .checkAttendance(
+                                                  valueOrDefault(
+                                                      currentUserDocument
+                                                          ?.dateCheck,
+                                                      0),
+                                                  6)
+                                              .toString() !=
+                                          '0')
+                                      ? null
+                                      : () {
+                                          print('Button pressed ...');
+                                        },
+                                  text: FFLocalizations.of(context).getText(
+                                    '1xyvk6yb' /* 7일차 */,
                                   ),
-                                  borderRadius: BorderRadius.circular(24.0),
+                                  options: FFButtonOptions(
+                                    width: 50.0,
+                                    height: 50.0,
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    color: Color(0xFFAAB0A2),
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .override(
+                                          fontFamily:
+                                              FlutterFlowTheme.of(context)
+                                                  .titleSmallFamily,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryBackground,
+                                          fontSize: 15.0,
+                                          letterSpacing: 0.0,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmallFamily),
+                                        ),
+                                    elevation: 20.0,
+                                    borderSide: BorderSide(
+                                      color: Color(0xFF848F70),
+                                      width: 2.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(24.0),
+                                    disabledColor: Color(0xFF435F23),
+                                    disabledTextColor:
+                                        FlutterFlowTheme.of(context)
+                                            .primaryBackground,
+                                  ),
                                 ),
                               ),
                             ),
                           ],
                         ),
                       ),
-                      FFButtonWidget(
-                        onPressed: () async {
-                          if ((dateTimeFormat(
-                                        'yMd',
-                                        functions.subDate(),
-                                        locale: FFLocalizations.of(context)
-                                            .languageCode,
-                                      ) ==
-                                      dateTimeFormat(
-                                        'yMd',
-                                        attendance0125DateRecord?.createdTimeA,
-                                        locale: FFLocalizations.of(context)
-                                            .languageCode,
-                                      )) &&
-                                  (_model.count! < 7)
-                              ? true
-                              : true) {
-                            await attendance0125DateRecord!.reference
-                                .update(createDateRecordData(
-                              createdTimeA: getCurrentTimestamp,
-                            ));
-                            _model.count = _model.count! + 1;
-
-                            await currentUserReference!.update({
-                              ...mapToFirestore(
-                                {
-                                  'footprint': FieldValue.increment(1),
+                      AuthUserStreamWidget(
+                        builder: (context) => FFButtonWidget(
+                          onPressed: (functions
+                                      .checkAttendance(
+                                          valueOrDefault(
+                                              currentUserDocument?.dateCheck,
+                                              0),
+                                          functions.absDate(getCurrentTimestamp,
+                                              currentUserDocument!.dateStart!))
+                                      .toString() ==
+                                  '1')
+                              ? null
+                              : () async {
+                                  await currentUserReference!.update({
+                                    ...mapToFirestore(
+                                      {
+                                        'date_check': FieldValue.increment(
+                                            functions.updateDatetime(functions
+                                                .absDate(
+                                                    getCurrentTimestamp,
+                                                    currentUserDocument!
+                                                        .dateStart!))),
+                                        'footprint': FieldValue.increment(1),
+                                      },
+                                    ),
+                                  });
                                 },
-                              ),
-                            });
-                          } else {
-                            if (functions.checkDate(
-                                attendance0125DateRecord!.createdTimeA!)!) {
-                              await attendance0125DateRecord!.reference
-                                  .update(createDateRecordData(
-                                createdTimeA: functions.subDate(),
-                              ));
-                              _model.count = 0;
-                            }
-                          }
-                        },
-                        text: FFLocalizations.of(context).getText(
-                          'ty32x4k2' /* Button */,
-                        ),
-                        options: FFButtonOptions(
-                          height: 40.0,
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              24.0, 0.0, 24.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          color: FlutterFlowTheme.of(context).primary,
-                          textStyle: FlutterFlowTheme.of(context)
-                              .titleSmall
-                              .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .titleSmallFamily,
-                                color: Colors.white,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .titleSmallFamily),
-                              ),
-                          elevation: 3.0,
-                          borderSide: BorderSide(
-                            color: Colors.transparent,
-                            width: 1.0,
+                          text: FFLocalizations.of(context).getText(
+                            '2wf63trf' /* 출석하기 */,
                           ),
-                          borderRadius: BorderRadius.circular(8.0),
+                          options: FFButtonOptions(
+                            height: 40.0,
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                24.0, 0.0, 24.0, 0.0),
+                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color: Color(0xFF435F23),
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .titleSmallFamily,
+                                  color: Colors.white,
+                                  letterSpacing: 0.0,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .titleSmallFamily),
+                                ),
+                            elevation: 3.0,
+                            borderSide: BorderSide(
+                              color: Colors.transparent,
+                              width: 1.0,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
+                            disabledColor: Color(0xFFAAB0A2),
+                          ),
                         ),
                       ),
                       Container(
@@ -537,7 +645,7 @@ class _Attendance0125WidgetState extends State<Attendance0125Widget> {
                                     Expanded(
                                       child: Text(
                                         FFLocalizations.of(context).getText(
-                                          'c4yg8a52' /* 보유 발자국 */,
+                                          'h09bmnmy' /* 보유 발자국 */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -549,6 +657,7 @@ class _Attendance0125WidgetState extends State<Attendance0125Widget> {
                                                   FlutterFlowTheme.of(context)
                                                       .primaryText,
                                               fontSize: 20.0,
+                                              letterSpacing: 0.0,
                                               fontWeight: FontWeight.w600,
                                               useGoogleFonts: GoogleFonts
                                                       .asMap()
@@ -593,6 +702,7 @@ class _Attendance0125WidgetState extends State<Attendance0125Widget> {
                                                           .headlineMediumFamily,
                                                   color: Color(0xFF7C826C),
                                                   fontSize: 36.0,
+                                                  letterSpacing: 0.0,
                                                   useGoogleFonts: GoogleFonts
                                                           .asMap()
                                                       .containsKey(FlutterFlowTheme
@@ -605,7 +715,7 @@ class _Attendance0125WidgetState extends State<Attendance0125Widget> {
                                     ),
                                     Text(
                                       FFLocalizations.of(context).getText(
-                                        'wtd1d319' /* 발자국 */,
+                                        '7jrrxozu' /* 발자국 */,
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .headlineSmall
@@ -615,6 +725,7 @@ class _Attendance0125WidgetState extends State<Attendance0125Widget> {
                                                     .headlineSmallFamily,
                                             color: FlutterFlowTheme.of(context)
                                                 .primaryText,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey(
                                                     FlutterFlowTheme.of(context)

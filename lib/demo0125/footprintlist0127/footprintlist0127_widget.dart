@@ -78,6 +78,7 @@ class _Footprintlist0127WidgetState extends State<Footprintlist0127Widget> {
                         FlutterFlowTheme.of(context).headlineMediumFamily,
                     color: Colors.white,
                     fontSize: 22.0,
+                    letterSpacing: 0.0,
                     fontWeight: FontWeight.normal,
                     useGoogleFonts: GoogleFonts.asMap().containsKey(
                         FlutterFlowTheme.of(context).headlineMediumFamily),
@@ -129,7 +130,14 @@ class _Footprintlist0127WidgetState extends State<Footprintlist0127Widget> {
                         FFLocalizations.of(context).getText(
                           'np5sb91k' /* 당신의 소중한 발자국 */,
                         ),
-                        style: FlutterFlowTheme.of(context).labelLarge,
+                        style: FlutterFlowTheme.of(context).labelLarge.override(
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).labelLargeFamily,
+                              letterSpacing: 0.0,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context)
+                                      .labelLargeFamily),
+                            ),
                       ),
                     ),
                     Padding(
@@ -145,6 +153,7 @@ class _Footprintlist0127WidgetState extends State<Footprintlist0127Widget> {
                                 fontFamily: FlutterFlowTheme.of(context)
                                     .displayLargeFamily,
                                 fontSize: 50.0,
+                                letterSpacing: 0.0,
                                 useGoogleFonts: GoogleFonts.asMap().containsKey(
                                     FlutterFlowTheme.of(context)
                                         .displayLargeFamily),
@@ -166,7 +175,16 @@ class _Footprintlist0127WidgetState extends State<Footprintlist0127Widget> {
                           FFLocalizations.of(context).getText(
                             'f6qjcqct' /* Transactions */,
                           ),
-                          style: FlutterFlowTheme.of(context).labelLarge,
+                          style: FlutterFlowTheme.of(context)
+                              .labelLarge
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .labelLargeFamily,
+                                letterSpacing: 0.0,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .labelLargeFamily),
+                              ),
                         ),
                       ),
                     ),
@@ -273,7 +291,20 @@ class _Footprintlist0127WidgetState extends State<Footprintlist0127Widget> {
                                               listViewFootprintsLogRecord.from,
                                               style:
                                                   FlutterFlowTheme.of(context)
-                                                      .bodyLarge,
+                                                      .bodyLarge
+                                                      .override(
+                                                        fontFamily:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyLargeFamily,
+                                                        letterSpacing: 0.0,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyLargeFamily),
+                                                      ),
                                             ),
                                             Padding(
                                               padding: EdgeInsetsDirectional
@@ -289,7 +320,20 @@ class _Footprintlist0127WidgetState extends State<Footprintlist0127Widget> {
                                                 ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
-                                                        .labelMedium,
+                                                        .labelMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .labelMediumFamily,
+                                                          letterSpacing: 0.0,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .labelMediumFamily),
+                                                        ),
                                               ),
                                             ),
                                           ],
@@ -316,6 +360,7 @@ class _Footprintlist0127WidgetState extends State<Footprintlist0127Widget> {
                                                       .error
                                                   : FlutterFlowTheme.of(context)
                                                       .info,
+                                              letterSpacing: 0.0,
                                               useGoogleFonts: GoogleFonts
                                                       .asMap()
                                                   .containsKey(

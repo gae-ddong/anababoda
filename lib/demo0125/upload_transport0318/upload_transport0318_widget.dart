@@ -78,6 +78,7 @@ class _UploadTransport0318WidgetState extends State<UploadTransport0318Widget> {
                   fontFamily: FlutterFlowTheme.of(context).headlineMediumFamily,
                   color: Colors.white,
                   fontSize: 20.0,
+                  letterSpacing: 0.0,
                   fontWeight: FontWeight.normal,
                   useGoogleFonts: GoogleFonts.asMap().containsKey(
                       FlutterFlowTheme.of(context).headlineMediumFamily),
@@ -160,6 +161,7 @@ class _UploadTransport0318WidgetState extends State<UploadTransport0318Widget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMediumFamily,
                                               color: Color(0xFF435F23),
+                                              letterSpacing: 0.0,
                                               fontWeight: FontWeight.bold,
                                               useGoogleFonts: GoogleFonts
                                                       .asMap()
@@ -177,8 +179,18 @@ class _UploadTransport0318WidgetState extends State<UploadTransport0318Widget> {
                                         style: TextStyle(),
                                       )
                                     ],
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyMedium,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMediumFamily,
+                                          letterSpacing: 0.0,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMediumFamily),
+                                        ),
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
@@ -215,11 +227,23 @@ class _UploadTransport0318WidgetState extends State<UploadTransport0318Widget> {
                 autofocus: true,
                 obscureText: false,
                 decoration: InputDecoration(
-                  labelStyle: FlutterFlowTheme.of(context).labelMedium,
+                  labelStyle: FlutterFlowTheme.of(context).labelMedium.override(
+                        fontFamily:
+                            FlutterFlowTheme.of(context).labelMediumFamily,
+                        letterSpacing: 0.0,
+                        useGoogleFonts: GoogleFonts.asMap().containsKey(
+                            FlutterFlowTheme.of(context).labelMediumFamily),
+                      ),
                   hintText: FFLocalizations.of(context).getText(
                     'lkufajp3' /* 해당 부분에 대한 문자 텍스트를 복사해서 넣어 주세요 */,
                   ),
-                  hintStyle: FlutterFlowTheme.of(context).labelMedium,
+                  hintStyle: FlutterFlowTheme.of(context).labelMedium.override(
+                        fontFamily:
+                            FlutterFlowTheme.of(context).labelMediumFamily,
+                        letterSpacing: 0.0,
+                        useGoogleFonts: GoogleFonts.asMap().containsKey(
+                            FlutterFlowTheme.of(context).labelMediumFamily),
+                      ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
                       color: Color(0xFFAFAFB6),
@@ -249,7 +273,13 @@ class _UploadTransport0318WidgetState extends State<UploadTransport0318Widget> {
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                 ),
-                style: FlutterFlowTheme.of(context).bodyMedium,
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
+                      letterSpacing: 0.0,
+                      useGoogleFonts: GoogleFonts.asMap().containsKey(
+                          FlutterFlowTheme.of(context).bodyMediumFamily),
+                    ),
+                minLines: null,
                 validator: _model.textControllerValidator.asValidator(context),
               ),
             ),
@@ -263,7 +293,10 @@ class _UploadTransport0318WidgetState extends State<UploadTransport0318Widget> {
               children: [
                 FFButtonWidget(
                   onPressed: () async {
-                    if (functions.costCounting(_model.message!)) {
+                    if (functions.costCounting(valueOrDefault<String>(
+                      _model.textController.text,
+                      '0',
+                    ))) {
                       await currentUserReference!.update({
                         ...mapToFirestore(
                           {
@@ -275,14 +308,14 @@ class _UploadTransport0318WidgetState extends State<UploadTransport0318Widget> {
                       await currentUserReference!.update({
                         ...mapToFirestore(
                           {
-                            'footprint': FieldValue.increment(-(5)),
+                            'footprint': FieldValue.increment(-(0)),
                           },
                         ),
                       });
                     }
                   },
                   text: FFLocalizations.of(context).getText(
-                    '6rakhtl0' /* 제출하고 2발자국 얻기 */,
+                    '6rakhtl0' /* 제출하고 3발자국 얻기 */,
                   ),
                   options: FFButtonOptions(
                     width: 224.0,
@@ -297,6 +330,7 @@ class _UploadTransport0318WidgetState extends State<UploadTransport0318Widget> {
                               FlutterFlowTheme.of(context).titleSmallFamily,
                           color: Colors.white,
                           fontSize: 14.0,
+                          letterSpacing: 0.0,
                           useGoogleFonts: GoogleFonts.asMap().containsKey(
                               FlutterFlowTheme.of(context).titleSmallFamily),
                         ),
@@ -341,6 +375,7 @@ class _UploadTransport0318WidgetState extends State<UploadTransport0318Widget> {
                                 FlutterFlowTheme.of(context).bodyMediumFamily,
                             color: Color(0xFF435F23),
                             fontSize: 15.0,
+                            letterSpacing: 0.0,
                             fontWeight: FontWeight.w600,
                             useGoogleFonts: GoogleFonts.asMap().containsKey(
                                 FlutterFlowTheme.of(context).bodyMediumFamily),
@@ -361,6 +396,7 @@ class _UploadTransport0318WidgetState extends State<UploadTransport0318Widget> {
                               fontFamily:
                                   FlutterFlowTheme.of(context).bodyMediumFamily,
                               fontSize: 15.0,
+                              letterSpacing: 0.0,
                               useGoogleFonts: GoogleFonts.asMap().containsKey(
                                   FlutterFlowTheme.of(context)
                                       .bodyMediumFamily),

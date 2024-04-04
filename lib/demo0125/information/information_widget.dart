@@ -179,6 +179,7 @@ class _InformationWidgetState extends State<InformationWidget>
                                 fontFamily: FlutterFlowTheme.of(context)
                                     .displaySmallFamily,
                                 color: Color(0xFF435F23),
+                                letterSpacing: 0.0,
                                 useGoogleFonts: GoogleFonts.asMap().containsKey(
                                     FlutterFlowTheme.of(context)
                                         .displaySmallFamily),
@@ -197,7 +198,16 @@ class _InformationWidgetState extends State<InformationWidget>
                         obscureText: false,
                         decoration: InputDecoration(
                           labelText: currentUserDisplayName,
-                          labelStyle: FlutterFlowTheme.of(context).bodySmall,
+                          labelStyle: FlutterFlowTheme.of(context)
+                              .bodySmall
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .bodySmallFamily,
+                                letterSpacing: 0.0,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .bodySmallFamily),
+                              ),
                           hintText: FFLocalizations.of(context).getText(
                             'heyd30jf' /* 이름을 입력해주세요 */,
                           ),
@@ -207,6 +217,7 @@ class _InformationWidgetState extends State<InformationWidget>
                                 fontFamily: FlutterFlowTheme.of(context)
                                     .bodySmallFamily,
                                 fontSize: 12.0,
+                                letterSpacing: 0.0,
                                 useGoogleFonts: GoogleFonts.asMap().containsKey(
                                     FlutterFlowTheme.of(context)
                                         .bodySmallFamily),
@@ -245,7 +256,14 @@ class _InformationWidgetState extends State<InformationWidget>
                           contentPadding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 24.0, 20.0, 24.0),
                         ),
-                        style: FlutterFlowTheme.of(context).bodySmall,
+                        style: FlutterFlowTheme.of(context).bodySmall.override(
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).bodySmallFamily,
+                              letterSpacing: 0.0,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context).bodySmallFamily),
+                            ),
+                        minLines: null,
                         validator: _model.yourNameAccoountControllerValidator
                             .asValidator(context),
                       ).animateOnPageLoad(
@@ -263,11 +281,27 @@ class _InformationWidgetState extends State<InformationWidget>
                         labelText: FFLocalizations.of(context).getText(
                           'z9m39amv' /* Your Age */,
                         ),
-                        labelStyle: FlutterFlowTheme.of(context).bodySmall,
+                        labelStyle: FlutterFlowTheme.of(context)
+                            .bodySmall
+                            .override(
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).bodySmallFamily,
+                              letterSpacing: 0.0,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context).bodySmallFamily),
+                            ),
                         hintText: FFLocalizations.of(context).getText(
                           'ammkdwzg' /* i.e. 34 */,
                         ),
-                        hintStyle: FlutterFlowTheme.of(context).bodySmall,
+                        hintStyle: FlutterFlowTheme.of(context)
+                            .bodySmall
+                            .override(
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).bodySmallFamily,
+                              letterSpacing: 0.0,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context).bodySmallFamily),
+                            ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
                             color: Color(0x00000000),
@@ -302,7 +336,14 @@ class _InformationWidgetState extends State<InformationWidget>
                         contentPadding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 24.0, 20.0, 24.0),
                       ),
-                      style: FlutterFlowTheme.of(context).bodyMedium,
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                            fontFamily:
+                                FlutterFlowTheme.of(context).bodyMediumFamily,
+                            letterSpacing: 0.0,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).bodyMediumFamily),
+                          ),
+                      minLines: null,
                       keyboardType: TextInputType.number,
                       validator: _model.yourAgeAccoountControllerValidator
                           .asValidator(context),
@@ -320,11 +361,27 @@ class _InformationWidgetState extends State<InformationWidget>
                         labelText: FFLocalizations.of(context).getText(
                           'x4b8xaa6' /* Your Title */,
                         ),
-                        labelStyle: FlutterFlowTheme.of(context).bodySmall,
+                        labelStyle: FlutterFlowTheme.of(context)
+                            .bodySmall
+                            .override(
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).bodySmallFamily,
+                              letterSpacing: 0.0,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context).bodySmallFamily),
+                            ),
                         hintText: FFLocalizations.of(context).getText(
                           'suz37nkt' /* What is your position? */,
                         ),
-                        hintStyle: FlutterFlowTheme.of(context).bodySmall,
+                        hintStyle: FlutterFlowTheme.of(context)
+                            .bodySmall
+                            .override(
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).bodySmallFamily,
+                              letterSpacing: 0.0,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context).bodySmallFamily),
+                            ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
                             color: Color(0x00000000),
@@ -359,7 +416,14 @@ class _InformationWidgetState extends State<InformationWidget>
                         contentPadding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 24.0, 20.0, 24.0),
                       ),
-                      style: FlutterFlowTheme.of(context).bodyMedium,
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                            fontFamily:
+                                FlutterFlowTheme.of(context).bodyMediumFamily,
+                            letterSpacing: 0.0,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).bodyMediumFamily),
+                          ),
+                      minLines: null,
                       validator: _model.yourTitleAccoountControllerValidator
                           .asValidator(context),
                     ).animateOnPageLoad(
@@ -391,7 +455,16 @@ class _InformationWidgetState extends State<InformationWidget>
                         iconPadding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: Color(0xFF435F23),
-                        textStyle: FlutterFlowTheme.of(context).titleSmall,
+                        textStyle: FlutterFlowTheme.of(context)
+                            .titleSmall
+                            .override(
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).titleSmallFamily,
+                              letterSpacing: 0.0,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context)
+                                      .titleSmallFamily),
+                            ),
                         elevation: 3.0,
                         borderSide: BorderSide(
                           color: Colors.transparent,
@@ -457,6 +530,7 @@ class _InformationWidgetState extends State<InformationWidget>
                                               FlutterFlowTheme.of(context)
                                                   .bodyMediumFamily,
                                           color: Color(0xFF435F23),
+                                          letterSpacing: 0.0,
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(
                                                   FlutterFlowTheme.of(context)
@@ -474,6 +548,7 @@ class _InformationWidgetState extends State<InformationWidget>
                                         fontFamily: FlutterFlowTheme.of(context)
                                             .bodyMediumFamily,
                                         color: Color(0xFF435F23),
+                                        letterSpacing: 0.0,
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
                                                 FlutterFlowTheme.of(context)

@@ -191,6 +191,7 @@ class _Firstlogin0125WidgetState extends State<Firstlogin0125Widget>
                             FlutterFlowTheme.of(context).headlineSmall.override(
                                   fontFamily: FlutterFlowTheme.of(context)
                                       .headlineSmallFamily,
+                                  letterSpacing: 0.0,
                                   fontWeight: FontWeight.bold,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
@@ -226,8 +227,16 @@ class _Firstlogin0125WidgetState extends State<Firstlogin0125Widget>
                             labelText: FFLocalizations.of(context).getText(
                               '8fry1hxy' /* Email */,
                             ),
-                            labelStyle:
-                                FlutterFlowTheme.of(context).labelMedium,
+                            labelStyle: FlutterFlowTheme.of(context)
+                                .labelMedium
+                                .override(
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .labelMediumFamily,
+                                  letterSpacing: 0.0,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .labelMediumFamily),
+                                ),
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
                                 color: FlutterFlowTheme.of(context).alternate,
@@ -261,7 +270,17 @@ class _Firstlogin0125WidgetState extends State<Firstlogin0125Widget>
                                 .secondaryBackground,
                             contentPadding: EdgeInsets.all(24.0),
                           ),
-                          style: FlutterFlowTheme.of(context).bodyMedium,
+                          style: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .bodyMediumFamily,
+                                letterSpacing: 0.0,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .bodyMediumFamily),
+                              ),
+                          minLines: null,
                           keyboardType: TextInputType.emailAddress,
                           validator: _model.emailAddressLoginControllerValidator
                               .asValidator(context),
@@ -276,14 +295,23 @@ class _Firstlogin0125WidgetState extends State<Firstlogin0125Widget>
                         child: TextFormField(
                           controller: _model.passwordLoginController,
                           focusNode: _model.passwordLoginFocusNode,
+                          autofocus: false,
                           autofillHints: [AutofillHints.password],
                           obscureText: !_model.passwordLoginVisibility,
                           decoration: InputDecoration(
                             labelText: FFLocalizations.of(context).getText(
                               'qy9wutvi' /* Password */,
                             ),
-                            labelStyle:
-                                FlutterFlowTheme.of(context).labelMedium,
+                            labelStyle: FlutterFlowTheme.of(context)
+                                .labelMedium
+                                .override(
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .labelMediumFamily,
+                                  letterSpacing: 0.0,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .labelMediumFamily),
+                                ),
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
                                 color: FlutterFlowTheme.of(context).alternate,
@@ -332,7 +360,17 @@ class _Firstlogin0125WidgetState extends State<Firstlogin0125Widget>
                               ),
                             ),
                           ),
-                          style: FlutterFlowTheme.of(context).bodyMedium,
+                          style: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .bodyMediumFamily,
+                                letterSpacing: 0.0,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .bodyMediumFamily),
+                              ),
+                          minLines: null,
                           validator: _model.passwordLoginControllerValidator
                               .asValidator(context),
                         ),
@@ -375,6 +413,7 @@ class _Firstlogin0125WidgetState extends State<Firstlogin0125Widget>
                                 .override(
                                   fontFamily: 'gowum',
                                   color: Colors.white,
+                                  letterSpacing: 0.0,
                                   useGoogleFonts:
                                       GoogleFonts.asMap().containsKey('gowum'),
                                 ),
@@ -413,8 +452,17 @@ class _Firstlogin0125WidgetState extends State<Firstlogin0125Widget>
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
-                                textStyle:
-                                    FlutterFlowTheme.of(context).bodyMedium,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily,
+                                      letterSpacing: 0.0,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMediumFamily),
+                                    ),
                                 elevation: 0.0,
                                 borderSide: BorderSide(
                                   color: FlutterFlowTheme.of(context)
@@ -447,8 +495,17 @@ class _Firstlogin0125WidgetState extends State<Firstlogin0125Widget>
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
-                                textStyle:
-                                    FlutterFlowTheme.of(context).bodyMedium,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily,
+                                      letterSpacing: 0.0,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMediumFamily),
+                                    ),
                                 elevation: 0.0,
                                 borderSide: BorderSide(
                                   color: FlutterFlowTheme.of(context)
@@ -526,6 +583,7 @@ class _Firstlogin0125WidgetState extends State<Firstlogin0125Widget>
                                             fontFamily:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyMediumFamily,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey(
@@ -576,6 +634,7 @@ class _Firstlogin0125WidgetState extends State<Firstlogin0125Widget>
                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                       fontFamily: FlutterFlowTheme.of(context).titleSmallFamily,
                       color: Colors.white,
+                      letterSpacing: 0.0,
                       useGoogleFonts: GoogleFonts.asMap().containsKey(
                           FlutterFlowTheme.of(context).titleSmallFamily),
                     ),

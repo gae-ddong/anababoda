@@ -74,9 +74,21 @@ class _Search0126WidgetState extends State<Search0126Widget> {
                 labelText: FFLocalizations.of(context).getText(
                   'oe31ybqi' /* 검색 */,
                 ),
-                labelStyle: FlutterFlowTheme.of(context).labelMedium,
+                labelStyle: FlutterFlowTheme.of(context).labelMedium.override(
+                      fontFamily:
+                          FlutterFlowTheme.of(context).labelMediumFamily,
+                      letterSpacing: 0.0,
+                      useGoogleFonts: GoogleFonts.asMap().containsKey(
+                          FlutterFlowTheme.of(context).labelMediumFamily),
+                    ),
                 alignLabelWithHint: false,
-                hintStyle: FlutterFlowTheme.of(context).labelMedium,
+                hintStyle: FlutterFlowTheme.of(context).labelMedium.override(
+                      fontFamily:
+                          FlutterFlowTheme.of(context).labelMediumFamily,
+                      letterSpacing: 0.0,
+                      useGoogleFonts: GoogleFonts.asMap().containsKey(
+                          FlutterFlowTheme.of(context).labelMediumFamily),
+                    ),
                 enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(
                     color: FlutterFlowTheme.of(context).alternate,
@@ -109,7 +121,13 @@ class _Search0126WidgetState extends State<Search0126Widget> {
                   Icons.search_sharp,
                 ),
               ),
-              style: FlutterFlowTheme.of(context).bodyMedium,
+              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
+                    letterSpacing: 0.0,
+                    useGoogleFonts: GoogleFonts.asMap().containsKey(
+                        FlutterFlowTheme.of(context).bodyMediumFamily),
+                  ),
+              minLines: null,
               validator: _model.textControllerValidator.asValidator(context),
             ),
           ),

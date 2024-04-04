@@ -75,6 +75,7 @@ class _ChangePW0126WidgetState extends State<ChangePW0126Widget> {
                   fontFamily: FlutterFlowTheme.of(context).headlineMediumFamily,
                   color: Colors.white,
                   fontSize: 22.0,
+                  letterSpacing: 0.0,
                   fontWeight: FontWeight.normal,
                   useGoogleFonts: GoogleFonts.asMap().containsKey(
                       FlutterFlowTheme.of(context).headlineMediumFamily),
@@ -129,13 +130,22 @@ class _ChangePW0126WidgetState extends State<ChangePW0126Widget> {
                             fontFamily:
                                 FlutterFlowTheme.of(context).bodySmallFamily,
                             color: Color(0xFF435F23),
+                            letterSpacing: 0.0,
                             useGoogleFonts: GoogleFonts.asMap().containsKey(
                                 FlutterFlowTheme.of(context).bodySmallFamily),
                           ),
                       hintText: FFLocalizations.of(context).getText(
                         'pbmxykaf' /* 현재 이메일을 입력해주세요. */,
                       ),
-                      hintStyle: FlutterFlowTheme.of(context).bodySmall,
+                      hintStyle: FlutterFlowTheme.of(context)
+                          .bodySmall
+                          .override(
+                            fontFamily:
+                                FlutterFlowTheme.of(context).bodySmallFamily,
+                            letterSpacing: 0.0,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).bodySmallFamily),
+                          ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: Color(0xFFC3BEBE),
@@ -173,9 +183,11 @@ class _ChangePW0126WidgetState extends State<ChangePW0126Widget> {
                           fontFamily:
                               FlutterFlowTheme.of(context).bodySmallFamily,
                           fontSize: 12.0,
+                          letterSpacing: 0.0,
                           useGoogleFonts: GoogleFonts.asMap().containsKey(
                               FlutterFlowTheme.of(context).bodySmallFamily),
                         ),
+                    minLines: null,
                     validator: _model.currentEmailControllerValidator
                         .asValidator(context),
                   ),
@@ -222,6 +234,7 @@ class _ChangePW0126WidgetState extends State<ChangePW0126Widget> {
                 textStyle: FlutterFlowTheme.of(context).bodySmall.override(
                       fontFamily: FlutterFlowTheme.of(context).bodySmallFamily,
                       color: FlutterFlowTheme.of(context).secondaryBackground,
+                      letterSpacing: 0.0,
                       useGoogleFonts: GoogleFonts.asMap().containsKey(
                           FlutterFlowTheme.of(context).bodySmallFamily),
                     ),

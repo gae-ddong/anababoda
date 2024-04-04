@@ -49,7 +49,12 @@ class _Alarm0203WidgetState extends State<Alarm0203Widget> {
             FFLocalizations.of(context).getText(
               'bv932fqa' /* My Messages */,
             ),
-            style: FlutterFlowTheme.of(context).headlineLarge,
+            style: FlutterFlowTheme.of(context).headlineLarge.override(
+                  fontFamily: FlutterFlowTheme.of(context).headlineLargeFamily,
+                  letterSpacing: 0.0,
+                  useGoogleFonts: GoogleFonts.asMap().containsKey(
+                      FlutterFlowTheme.of(context).headlineLargeFamily),
+                ),
           ),
           actions: [],
           centerTitle: false,
@@ -67,7 +72,13 @@ class _Alarm0203WidgetState extends State<Alarm0203Widget> {
                   FFLocalizations.of(context).getText(
                     'mavnji04' /* Below are messages with your f... */,
                   ),
-                  style: FlutterFlowTheme.of(context).labelMedium,
+                  style: FlutterFlowTheme.of(context).labelMedium.override(
+                        fontFamily:
+                            FlutterFlowTheme.of(context).labelMediumFamily,
+                        letterSpacing: 0.0,
+                        useGoogleFonts: GoogleFonts.asMap().containsKey(
+                            FlutterFlowTheme.of(context).labelMediumFamily),
+                      ),
                 ),
               ),
               Padding(
@@ -150,7 +161,20 @@ class _Alarm0203WidgetState extends State<Alarm0203Widget> {
                                               textAlign: TextAlign.start,
                                               style:
                                                   FlutterFlowTheme.of(context)
-                                                      .bodyLarge,
+                                                      .bodyLarge
+                                                      .override(
+                                                        fontFamily:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyLargeFamily,
+                                                        letterSpacing: 0.0,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyLargeFamily),
+                                                      ),
                                             ),
                                             Padding(
                                               padding: EdgeInsetsDirectional
@@ -163,7 +187,20 @@ class _Alarm0203WidgetState extends State<Alarm0203Widget> {
                                                 textAlign: TextAlign.start,
                                                 style:
                                                     FlutterFlowTheme.of(context)
-                                                        .labelMedium,
+                                                        .labelMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .labelMediumFamily,
+                                                          letterSpacing: 0.0,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .labelMediumFamily),
+                                                        ),
                                               ),
                                             ),
                                             Row(
@@ -184,7 +221,20 @@ class _Alarm0203WidgetState extends State<Alarm0203Widget> {
                                                     textAlign: TextAlign.start,
                                                     style: FlutterFlowTheme.of(
                                                             context)
-                                                        .labelSmall,
+                                                        .labelSmall
+                                                        .override(
+                                                          fontFamily:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .labelSmallFamily,
+                                                          letterSpacing: 0.0,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .labelSmallFamily),
+                                                        ),
                                                   ),
                                                 ),
                                                 Icon(

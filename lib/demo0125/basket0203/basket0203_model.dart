@@ -20,8 +20,6 @@ class Basket0203Model extends FlutterFlowModel<Basket0203Widget> {
   // State field(s) for Checkbox widget.
   bool? checkboxValue2;
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -29,8 +27,4 @@ class Basket0203Model extends FlutterFlowModel<Basket0203Widget> {
   void dispose() {
     unfocusNode.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

@@ -50,6 +50,7 @@ class _Homepage0125WidgetState extends State<Homepage0125Widget> {
           ),
           style: FlutterFlowTheme.of(context).headlineLarge.override(
                 fontFamily: 'gowum',
+                letterSpacing: 0.0,
                 fontWeight: FontWeight.w600,
                 useGoogleFonts: GoogleFonts.asMap().containsKey('gowum'),
               ),
@@ -98,7 +99,10 @@ class _Homepage0125WidgetState extends State<Homepage0125Widget> {
                           BoxShadow(
                             blurRadius: 6.0,
                             color: Color(0x4B1A1F24),
-                            offset: Offset(0.0, 2.0),
+                            offset: Offset(
+                              0.0,
+                              2.0,
+                            ),
                           )
                         ],
                         borderRadius: BorderRadius.circular(8.0),
@@ -135,6 +139,7 @@ class _Homepage0125WidgetState extends State<Homepage0125Widget> {
                                             color: FlutterFlowTheme.of(context)
                                                 .textColor,
                                             fontSize: 24.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey('gowum'),
                                           ),
@@ -183,6 +188,7 @@ class _Homepage0125WidgetState extends State<Homepage0125Widget> {
                                                     FlutterFlowTheme.of(context)
                                                         .textColor,
                                                 fontSize: 45.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                                 useGoogleFonts:
                                                     GoogleFonts.asMap()
@@ -202,6 +208,7 @@ class _Homepage0125WidgetState extends State<Homepage0125Widget> {
                                             color: FlutterFlowTheme.of(context)
                                                 .textColor,
                                             fontSize: 25.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey('gowum'),
                                           ),
@@ -265,7 +272,10 @@ class _Homepage0125WidgetState extends State<Homepage0125Widget> {
                                       BoxShadow(
                                         blurRadius: 2.0,
                                         color: Color(0x33000000),
-                                        offset: Offset(3.0, 4.0),
+                                        offset: Offset(
+                                          3.0,
+                                          4.0,
+                                        ),
                                         spreadRadius: 2.0,
                                       )
                                     ],
@@ -298,6 +308,7 @@ class _Homepage0125WidgetState extends State<Homepage0125Widget> {
                                           .headlineSmall
                                           .override(
                                             fontFamily: 'gowum',
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey('gowum'),
@@ -315,6 +326,7 @@ class _Homepage0125WidgetState extends State<Homepage0125Widget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'gowum',
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey('gowum'),
                                           ),
@@ -357,7 +369,10 @@ class _Homepage0125WidgetState extends State<Homepage0125Widget> {
                                       BoxShadow(
                                         blurRadius: 2.0,
                                         color: Color(0x33000000),
-                                        offset: Offset(3.0, 4.0),
+                                        offset: Offset(
+                                          3.0,
+                                          4.0,
+                                        ),
                                         spreadRadius: 2.0,
                                       )
                                     ],
@@ -390,6 +405,7 @@ class _Homepage0125WidgetState extends State<Homepage0125Widget> {
                                           .headlineSmall
                                           .override(
                                             fontFamily: 'gowum',
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey('gowum'),
@@ -407,6 +423,7 @@ class _Homepage0125WidgetState extends State<Homepage0125Widget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'gowum',
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey('gowum'),
                                           ),
@@ -449,7 +466,10 @@ class _Homepage0125WidgetState extends State<Homepage0125Widget> {
                                       BoxShadow(
                                         blurRadius: 2.0,
                                         color: Color(0x33000000),
-                                        offset: Offset(3.0, 4.0),
+                                        offset: Offset(
+                                          3.0,
+                                          4.0,
+                                        ),
                                         spreadRadius: 2.0,
                                       )
                                     ],
@@ -486,6 +506,7 @@ class _Homepage0125WidgetState extends State<Homepage0125Widget> {
                                           .headlineSmall
                                           .override(
                                             fontFamily: 'gowum',
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey('gowum'),
@@ -503,6 +524,7 @@ class _Homepage0125WidgetState extends State<Homepage0125Widget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'gowum',
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey('gowum'),
                                           ),
@@ -545,7 +567,10 @@ class _Homepage0125WidgetState extends State<Homepage0125Widget> {
                                       BoxShadow(
                                         blurRadius: 2.0,
                                         color: Color(0x33000000),
-                                        offset: Offset(3.0, 4.0),
+                                        offset: Offset(
+                                          3.0,
+                                          4.0,
+                                        ),
                                         spreadRadius: 2.0,
                                       )
                                     ],
@@ -578,6 +603,7 @@ class _Homepage0125WidgetState extends State<Homepage0125Widget> {
                                           .headlineSmall
                                           .override(
                                             fontFamily: 'gowum',
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey('gowum'),
@@ -595,6 +621,7 @@ class _Homepage0125WidgetState extends State<Homepage0125Widget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'gowum',
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey('gowum'),
                                           ),

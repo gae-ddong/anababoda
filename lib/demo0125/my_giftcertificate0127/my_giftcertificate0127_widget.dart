@@ -79,6 +79,7 @@ class _MyGiftcertificate0127WidgetState
                   fontFamily: FlutterFlowTheme.of(context).headlineMediumFamily,
                   color: Colors.white,
                   fontSize: 22.0,
+                  letterSpacing: 0.0,
                   fontWeight: FontWeight.normal,
                   useGoogleFonts: GoogleFonts.asMap().containsKey(
                       FlutterFlowTheme.of(context).headlineMediumFamily),
@@ -140,6 +141,7 @@ class _MyGiftcertificate0127WidgetState
                                   FlutterFlowTheme.of(context).bodyMediumFamily,
                               color: Color(0xFF435F23),
                               fontSize: 15.0,
+                              letterSpacing: 0.0,
                               fontWeight: FontWeight.w600,
                               useGoogleFonts: GoogleFonts.asMap().containsKey(
                                   FlutterFlowTheme.of(context)
@@ -171,6 +173,7 @@ class _MyGiftcertificate0127WidgetState
                                       fontFamily: 'gowum',
                                       color: Color(0xFF435F23),
                                       fontSize: 35.0,
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey('gowum'),
@@ -188,6 +191,7 @@ class _MyGiftcertificate0127WidgetState
                                   fontFamily: 'gowum',
                                   color: Color(0xFF435F23),
                                   fontSize: 15.0,
+                                  letterSpacing: 0.0,
                                   fontWeight: FontWeight.w600,
                                   useGoogleFonts:
                                       GoogleFonts.asMap().containsKey('gowum'),
@@ -239,6 +243,7 @@ class _MyGiftcertificate0127WidgetState
                                           .bodyMediumFamily,
                                       color: Color(0xFF435F23),
                                       fontSize: 16.0,
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.bold,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
@@ -253,7 +258,16 @@ class _MyGiftcertificate0127WidgetState
                                 style: TextStyle(),
                               )
                             ],
-                            style: FlutterFlowTheme.of(context).bodyMedium,
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .bodyMediumFamily,
+                                  letterSpacing: 0.0,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily),
+                                ),
                           ),
                         ),
                         FFButtonWidget(
@@ -278,6 +292,7 @@ class _MyGiftcertificate0127WidgetState
                                       .titleSmallFamily,
                                   color: Colors.white,
                                   fontSize: 13.0,
+                                  letterSpacing: 0.0,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
                                           .titleSmallFamily),
@@ -325,6 +340,7 @@ class _MyGiftcertificate0127WidgetState
                                           .bodyMediumFamily,
                                       color: Color(0xFF435F23),
                                       fontSize: 16.0,
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.bold,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
@@ -339,7 +355,16 @@ class _MyGiftcertificate0127WidgetState
                                 style: TextStyle(),
                               )
                             ],
-                            style: FlutterFlowTheme.of(context).bodyMedium,
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .bodyMediumFamily,
+                                  letterSpacing: 0.0,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily),
+                                ),
                           ),
                         ),
                         FFButtonWidget(
@@ -364,6 +389,7 @@ class _MyGiftcertificate0127WidgetState
                                       .titleSmallFamily,
                                   color: Colors.white,
                                   fontSize: 13.0,
+                                  letterSpacing: 0.0,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
                                           .titleSmallFamily),
@@ -411,6 +437,7 @@ class _MyGiftcertificate0127WidgetState
                                           .bodyMediumFamily,
                                       color: Color(0xFF435F23),
                                       fontSize: 16.0,
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.bold,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
@@ -425,7 +452,16 @@ class _MyGiftcertificate0127WidgetState
                                 style: TextStyle(),
                               )
                             ],
-                            style: FlutterFlowTheme.of(context).bodyMedium,
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .bodyMediumFamily,
+                                  letterSpacing: 0.0,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily),
+                                ),
                           ),
                         ),
                         FFButtonWidget(
@@ -450,6 +486,7 @@ class _MyGiftcertificate0127WidgetState
                                       .titleSmallFamily,
                                   color: Colors.white,
                                   fontSize: 13.0,
+                                  letterSpacing: 0.0,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
                                           .titleSmallFamily),

@@ -19,8 +19,6 @@ class ChangePW0126Model extends FlutterFlowModel<ChangePW0126Widget> {
   TextEditingController? currentEmailController;
   String? Function(BuildContext, String?)? currentEmailControllerValidator;
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -29,8 +27,4 @@ class ChangePW0126Model extends FlutterFlowModel<ChangePW0126Widget> {
     currentEmailFocusNode?.dispose();
     currentEmailController?.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

@@ -75,6 +75,7 @@ class _Walking0127WidgetState extends State<Walking0127Widget> {
                   fontFamily: FlutterFlowTheme.of(context).headlineMediumFamily,
                   color: Colors.white,
                   fontSize: 22.0,
+                  letterSpacing: 0.0,
                   fontWeight: FontWeight.normal,
                   useGoogleFonts: GoogleFonts.asMap().containsKey(
                       FlutterFlowTheme.of(context).headlineMediumFamily),
@@ -146,6 +147,7 @@ class _Walking0127WidgetState extends State<Walking0127Widget> {
                                     fontFamily: FlutterFlowTheme.of(context)
                                         .bodyMediumFamily,
                                     fontSize: 20.0,
+                                    letterSpacing: 0.0,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
                                             FlutterFlowTheme.of(context)
@@ -171,7 +173,16 @@ class _Walking0127WidgetState extends State<Walking0127Widget> {
                                   currentUserDocument?.walkLog, 0.0)),
                               formatType: FormatType.percent,
                             ),
-                            style: FlutterFlowTheme.of(context).headlineSmall,
+                            style: FlutterFlowTheme.of(context)
+                                .headlineSmall
+                                .override(
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .headlineSmallFamily,
+                                  letterSpacing: 0.0,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .headlineSmallFamily),
+                                ),
                           ),
                         ),
                       ),
@@ -314,6 +325,7 @@ class _Walking0127WidgetState extends State<Walking0127Widget> {
                                         .titleSmallFamily,
                                     color: Colors.white,
                                     fontSize: 16.0,
+                                    letterSpacing: 0.0,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
                                             FlutterFlowTheme.of(context)
@@ -365,6 +377,7 @@ class _Walking0127WidgetState extends State<Walking0127Widget> {
                                 FlutterFlowTheme.of(context).bodyMediumFamily,
                             color: Color(0xFF435F23),
                             fontSize: 15.0,
+                            letterSpacing: 0.0,
                             fontWeight: FontWeight.w600,
                             useGoogleFonts: GoogleFonts.asMap().containsKey(
                                 FlutterFlowTheme.of(context).bodyMediumFamily),
@@ -382,6 +395,7 @@ class _Walking0127WidgetState extends State<Walking0127Widget> {
                               fontFamily:
                                   FlutterFlowTheme.of(context).bodyMediumFamily,
                               fontSize: 15.0,
+                              letterSpacing: 0.0,
                               useGoogleFonts: GoogleFonts.asMap().containsKey(
                                   FlutterFlowTheme.of(context)
                                       .bodyMediumFamily),

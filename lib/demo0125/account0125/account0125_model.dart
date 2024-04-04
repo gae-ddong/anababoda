@@ -40,8 +40,6 @@ class Account0125Model extends FlutterFlowModel<Account0125Widget> {
   TextEditingController? yourAgeAccoountController;
   String? Function(BuildContext, String?)? yourAgeAccoountControllerValidator;
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {
     passwordCreateAccoountVisibility = false;
@@ -65,8 +63,4 @@ class Account0125Model extends FlutterFlowModel<Account0125Widget> {
     yourAgeAccoountFocusNode?.dispose();
     yourAgeAccoountController?.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

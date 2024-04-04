@@ -78,6 +78,7 @@ class _Giftcertificate0127WidgetState extends State<Giftcertificate0127Widget>
                   fontFamily: FlutterFlowTheme.of(context).headlineMediumFamily,
                   color: Colors.white,
                   fontSize: 22.0,
+                  letterSpacing: 0.0,
                   fontWeight: FontWeight.normal,
                   useGoogleFonts: GoogleFonts.asMap().containsKey(
                       FlutterFlowTheme.of(context).headlineMediumFamily),
@@ -146,6 +147,7 @@ class _Giftcertificate0127WidgetState extends State<Giftcertificate0127Widget>
                                       .bodyMediumFamily,
                                   color: Color(0xFF435F23),
                                   fontSize: 23.0,
+                                  letterSpacing: 0.0,
                                   fontWeight: FontWeight.w600,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
@@ -178,6 +180,7 @@ class _Giftcertificate0127WidgetState extends State<Giftcertificate0127Widget>
                                         fontFamily: 'gowum',
                                         color: Color(0xFF435F23),
                                         fontSize: 40.0,
+                                        letterSpacing: 0.0,
                                         fontWeight: FontWeight.w800,
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey('gowum'),
@@ -195,6 +198,7 @@ class _Giftcertificate0127WidgetState extends State<Giftcertificate0127Widget>
                                     fontFamily: 'gowum',
                                     color: Color(0xFF435F23),
                                     fontSize: 23.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w600,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey('gowum'),
@@ -224,6 +228,7 @@ class _Giftcertificate0127WidgetState extends State<Giftcertificate0127Widget>
                           fontFamily:
                               FlutterFlowTheme.of(context).titleMediumFamily,
                           fontSize: 15.0,
+                          letterSpacing: 0.0,
                           useGoogleFonts: GoogleFonts.asMap().containsKey(
                               FlutterFlowTheme.of(context).titleMediumFamily),
                         ),
@@ -273,6 +278,7 @@ class _Giftcertificate0127WidgetState extends State<Giftcertificate0127Widget>
                                     fontFamily: FlutterFlowTheme.of(context)
                                         .bodyMediumFamily,
                                     fontSize: 18.0,
+                                    letterSpacing: 0.0,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
                                             FlutterFlowTheme.of(context)
@@ -306,6 +312,7 @@ class _Giftcertificate0127WidgetState extends State<Giftcertificate0127Widget>
                                       fontFamily: FlutterFlowTheme.of(context)
                                           .titleLargeFamily,
                                       fontSize: 18.0,
+                                      letterSpacing: 0.0,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
                                               FlutterFlowTheme.of(context)
@@ -322,6 +329,7 @@ class _Giftcertificate0127WidgetState extends State<Giftcertificate0127Widget>
                                       fontFamily: FlutterFlowTheme.of(context)
                                           .labelMediumFamily,
                                       fontSize: 11.0,
+                                      letterSpacing: 0.0,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
                                               FlutterFlowTheme.of(context)
@@ -362,6 +370,7 @@ class _Giftcertificate0127WidgetState extends State<Giftcertificate0127Widget>
                                       fontFamily: FlutterFlowTheme.of(context)
                                           .titleLargeFamily,
                                       fontSize: 18.0,
+                                      letterSpacing: 0.0,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
                                               FlutterFlowTheme.of(context)
@@ -378,6 +387,7 @@ class _Giftcertificate0127WidgetState extends State<Giftcertificate0127Widget>
                                       fontFamily: FlutterFlowTheme.of(context)
                                           .labelMediumFamily,
                                       fontSize: 11.0,
+                                      letterSpacing: 0.0,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
                                               FlutterFlowTheme.of(context)
@@ -402,6 +412,7 @@ class _Giftcertificate0127WidgetState extends State<Giftcertificate0127Widget>
                               fontFamily:
                                   FlutterFlowTheme.of(context).bodyMediumFamily,
                               fontSize: 32.0,
+                              letterSpacing: 0.0,
                               useGoogleFonts: GoogleFonts.asMap().containsKey(
                                   FlutterFlowTheme.of(context)
                                       .bodyMediumFamily),
@@ -415,6 +426,7 @@ class _Giftcertificate0127WidgetState extends State<Giftcertificate0127Widget>
                               fontFamily:
                                   FlutterFlowTheme.of(context).bodyMediumFamily,
                               fontSize: 32.0,
+                              letterSpacing: 0.0,
                               useGoogleFonts: GoogleFonts.asMap().containsKey(
                                   FlutterFlowTheme.of(context)
                                       .bodyMediumFamily),
@@ -452,6 +464,7 @@ class _Giftcertificate0127WidgetState extends State<Giftcertificate0127Widget>
                               FlutterFlowTheme.of(context).titleSmallFamily,
                           color: Colors.white,
                           fontSize: 14.0,
+                          letterSpacing: 0.0,
                           useGoogleFonts: GoogleFonts.asMap().containsKey(
                               FlutterFlowTheme.of(context).titleSmallFamily),
                         ),
@@ -483,6 +496,7 @@ class _Giftcertificate0127WidgetState extends State<Giftcertificate0127Widget>
                               FlutterFlowTheme.of(context).titleSmallFamily,
                           color: Colors.white,
                           fontSize: 14.0,
+                          letterSpacing: 0.0,
                           useGoogleFonts: GoogleFonts.asMap().containsKey(
                               FlutterFlowTheme.of(context).titleSmallFamily),
                         ),

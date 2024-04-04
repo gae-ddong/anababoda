@@ -82,6 +82,7 @@ class _DeleteAccount0126WidgetState extends State<DeleteAccount0126Widget> {
                   fontFamily: FlutterFlowTheme.of(context).headlineMediumFamily,
                   color: Colors.white,
                   fontSize: 22.0,
+                  letterSpacing: 0.0,
                   fontWeight: FontWeight.normal,
                   useGoogleFonts: GoogleFonts.asMap().containsKey(
                       FlutterFlowTheme.of(context).headlineMediumFamily),
@@ -136,13 +137,22 @@ class _DeleteAccount0126WidgetState extends State<DeleteAccount0126Widget> {
                             fontFamily:
                                 FlutterFlowTheme.of(context).bodySmallFamily,
                             color: Color(0xFF435F23),
+                            letterSpacing: 0.0,
                             useGoogleFonts: GoogleFonts.asMap().containsKey(
                                 FlutterFlowTheme.of(context).bodySmallFamily),
                           ),
                       hintText: FFLocalizations.of(context).getText(
                         'yw422mq5' /* Enter your email... */,
                       ),
-                      hintStyle: FlutterFlowTheme.of(context).bodySmall,
+                      hintStyle: FlutterFlowTheme.of(context)
+                          .bodySmall
+                          .override(
+                            fontFamily:
+                                FlutterFlowTheme.of(context).bodySmallFamily,
+                            letterSpacing: 0.0,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).bodySmallFamily),
+                          ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: Color(0xFFA9B4A9),
@@ -180,9 +190,11 @@ class _DeleteAccount0126WidgetState extends State<DeleteAccount0126Widget> {
                           fontFamily:
                               FlutterFlowTheme.of(context).bodySmallFamily,
                           fontSize: 12.0,
+                          letterSpacing: 0.0,
                           useGoogleFonts: GoogleFonts.asMap().containsKey(
                               FlutterFlowTheme.of(context).bodySmallFamily),
                         ),
+                    minLines: null,
                     validator: _model.currentPasswordControllerValidator
                         .asValidator(context),
                   ),
@@ -228,6 +240,7 @@ class _DeleteAccount0126WidgetState extends State<DeleteAccount0126Widget> {
                                     fontFamily: FlutterFlowTheme.of(context)
                                         .bodyMediumFamily,
                                     color: Color(0xFF435F23),
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
@@ -244,7 +257,16 @@ class _DeleteAccount0126WidgetState extends State<DeleteAccount0126Widget> {
                               ),
                             )
                           ],
-                          style: FlutterFlowTheme.of(context).bodyMedium,
+                          style: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .bodyMediumFamily,
+                                letterSpacing: 0.0,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .bodyMediumFamily),
+                              ),
                         ),
                       ),
                     ),
@@ -285,6 +307,7 @@ class _DeleteAccount0126WidgetState extends State<DeleteAccount0126Widget> {
                               fontFamily:
                                   FlutterFlowTheme.of(context).bodyMediumFamily,
                               fontSize: 12.0,
+                              letterSpacing: 0.0,
                               useGoogleFonts: GoogleFonts.asMap().containsKey(
                                   FlutterFlowTheme.of(context)
                                       .bodyMediumFamily),
@@ -323,6 +346,7 @@ class _DeleteAccount0126WidgetState extends State<DeleteAccount0126Widget> {
                               FlutterFlowTheme.of(context).titleSmallFamily,
                           color: Colors.white,
                           fontSize: 14.0,
+                          letterSpacing: 0.0,
                           useGoogleFonts: GoogleFonts.asMap().containsKey(
                               FlutterFlowTheme.of(context).titleSmallFamily),
                         ),
@@ -356,6 +380,7 @@ class _DeleteAccount0126WidgetState extends State<DeleteAccount0126Widget> {
                               FlutterFlowTheme.of(context).titleSmallFamily,
                           color: Colors.white,
                           fontSize: 14.0,
+                          letterSpacing: 0.0,
                           useGoogleFonts: GoogleFonts.asMap().containsKey(
                               FlutterFlowTheme.of(context).titleSmallFamily),
                         ),

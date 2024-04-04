@@ -22,8 +22,6 @@ class EditProfile0127Model extends FlutterFlowModel<EditProfile0127Widget> {
   TextEditingController? yourAgeController;
   String? Function(BuildContext, String?)? yourAgeControllerValidator;
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -35,8 +33,4 @@ class EditProfile0127Model extends FlutterFlowModel<EditProfile0127Widget> {
     yourAgeFocusNode?.dispose();
     yourAgeController?.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

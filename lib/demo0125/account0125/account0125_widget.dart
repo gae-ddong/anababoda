@@ -112,6 +112,7 @@ class _Account0125WidgetState extends State<Account0125Widget> {
                             fontFamily:
                                 FlutterFlowTheme.of(context).displaySmallFamily,
                             color: Color(0xFF435F23),
+                            letterSpacing: 0.0,
                             useGoogleFonts: GoogleFonts.asMap().containsKey(
                                 FlutterFlowTheme.of(context)
                                     .displaySmallFamily),
@@ -130,11 +131,27 @@ class _Account0125WidgetState extends State<Account0125Widget> {
                       labelText: FFLocalizations.of(context).getText(
                         'ct6st7dq' /* Email Address */,
                       ),
-                      labelStyle: FlutterFlowTheme.of(context).bodySmall,
+                      labelStyle: FlutterFlowTheme.of(context)
+                          .bodySmall
+                          .override(
+                            fontFamily:
+                                FlutterFlowTheme.of(context).bodySmallFamily,
+                            letterSpacing: 0.0,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).bodySmallFamily),
+                          ),
                       hintText: FFLocalizations.of(context).getText(
                         'qwijjyim' /* Enter your email... */,
                       ),
-                      hintStyle: FlutterFlowTheme.of(context).bodySmall,
+                      hintStyle: FlutterFlowTheme.of(context)
+                          .bodySmall
+                          .override(
+                            fontFamily:
+                                FlutterFlowTheme.of(context).bodySmallFamily,
+                            letterSpacing: 0.0,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).bodySmallFamily),
+                          ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: Color(0x00000000),
@@ -169,7 +186,14 @@ class _Account0125WidgetState extends State<Account0125Widget> {
                       contentPadding: EdgeInsetsDirectional.fromSTEB(
                           20.0, 24.0, 20.0, 24.0),
                     ),
-                    style: FlutterFlowTheme.of(context).bodyMedium,
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily:
+                              FlutterFlowTheme.of(context).bodyMediumFamily,
+                          letterSpacing: 0.0,
+                          useGoogleFonts: GoogleFonts.asMap().containsKey(
+                              FlutterFlowTheme.of(context).bodyMediumFamily),
+                        ),
+                    minLines: null,
                     validator: _model.emailAddressAccoountControllerValidator
                         .asValidator(context),
                   ),
@@ -185,11 +209,27 @@ class _Account0125WidgetState extends State<Account0125Widget> {
                       labelText: FFLocalizations.of(context).getText(
                         'i9gg93q5' /* Password */,
                       ),
-                      labelStyle: FlutterFlowTheme.of(context).bodySmall,
+                      labelStyle: FlutterFlowTheme.of(context)
+                          .bodySmall
+                          .override(
+                            fontFamily:
+                                FlutterFlowTheme.of(context).bodySmallFamily,
+                            letterSpacing: 0.0,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).bodySmallFamily),
+                          ),
                       hintText: FFLocalizations.of(context).getText(
                         's56sp9yc' /* Enter your password... */,
                       ),
-                      hintStyle: FlutterFlowTheme.of(context).bodySmall,
+                      hintStyle: FlutterFlowTheme.of(context)
+                          .bodySmall
+                          .override(
+                            fontFamily:
+                                FlutterFlowTheme.of(context).bodySmallFamily,
+                            letterSpacing: 0.0,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).bodySmallFamily),
+                          ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: Color(0x00000000),
@@ -238,7 +278,14 @@ class _Account0125WidgetState extends State<Account0125Widget> {
                         ),
                       ),
                     ),
-                    style: FlutterFlowTheme.of(context).bodyMedium,
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily:
+                              FlutterFlowTheme.of(context).bodyMediumFamily,
+                          letterSpacing: 0.0,
+                          useGoogleFonts: GoogleFonts.asMap().containsKey(
+                              FlutterFlowTheme.of(context).bodyMediumFamily),
+                        ),
+                    minLines: null,
                     validator: _model.passwordCreateAccoountControllerValidator
                         .asValidator(context),
                   ),
@@ -254,11 +301,27 @@ class _Account0125WidgetState extends State<Account0125Widget> {
                       labelText: FFLocalizations.of(context).getText(
                         '25rksdmx' /* Confirm Password */,
                       ),
-                      labelStyle: FlutterFlowTheme.of(context).bodySmall,
+                      labelStyle: FlutterFlowTheme.of(context)
+                          .bodySmall
+                          .override(
+                            fontFamily:
+                                FlutterFlowTheme.of(context).bodySmallFamily,
+                            letterSpacing: 0.0,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).bodySmallFamily),
+                          ),
                       hintText: FFLocalizations.of(context).getText(
                         'h8z5jgyh' /* Enter your password... */,
                       ),
-                      hintStyle: FlutterFlowTheme.of(context).bodySmall,
+                      hintStyle: FlutterFlowTheme.of(context)
+                          .bodySmall
+                          .override(
+                            fontFamily:
+                                FlutterFlowTheme.of(context).bodySmallFamily,
+                            letterSpacing: 0.0,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).bodySmallFamily),
+                          ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: Color(0x00000000),
@@ -307,7 +370,14 @@ class _Account0125WidgetState extends State<Account0125Widget> {
                         ),
                       ),
                     ),
-                    style: FlutterFlowTheme.of(context).bodyMedium,
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily:
+                              FlutterFlowTheme.of(context).bodyMediumFamily,
+                          letterSpacing: 0.0,
+                          useGoogleFonts: GoogleFonts.asMap().containsKey(
+                              FlutterFlowTheme.of(context).bodyMediumFamily),
+                        ),
+                    minLines: null,
                     validator: _model.passwordConfirmAccoountControllerValidator
                         .asValidator(context),
                   ),
@@ -323,7 +393,15 @@ class _Account0125WidgetState extends State<Account0125Widget> {
                       labelText: FFLocalizations.of(context).getText(
                         '32pgygog' /* Your Name */,
                       ),
-                      labelStyle: FlutterFlowTheme.of(context).bodySmall,
+                      labelStyle: FlutterFlowTheme.of(context)
+                          .bodySmall
+                          .override(
+                            fontFamily:
+                                FlutterFlowTheme.of(context).bodySmallFamily,
+                            letterSpacing: 0.0,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).bodySmallFamily),
+                          ),
                       hintText: FFLocalizations.of(context).getText(
                         'y7t68u6i' /* Enter your name... */,
                       ),
@@ -333,6 +411,7 @@ class _Account0125WidgetState extends State<Account0125Widget> {
                             fontFamily:
                                 FlutterFlowTheme.of(context).bodySmallFamily,
                             fontSize: 12.0,
+                            letterSpacing: 0.0,
                             useGoogleFonts: GoogleFonts.asMap().containsKey(
                                 FlutterFlowTheme.of(context).bodySmallFamily),
                           ),
@@ -370,7 +449,14 @@ class _Account0125WidgetState extends State<Account0125Widget> {
                       contentPadding: EdgeInsetsDirectional.fromSTEB(
                           20.0, 24.0, 20.0, 24.0),
                     ),
-                    style: FlutterFlowTheme.of(context).bodySmall,
+                    style: FlutterFlowTheme.of(context).bodySmall.override(
+                          fontFamily:
+                              FlutterFlowTheme.of(context).bodySmallFamily,
+                          letterSpacing: 0.0,
+                          useGoogleFonts: GoogleFonts.asMap().containsKey(
+                              FlutterFlowTheme.of(context).bodySmallFamily),
+                        ),
+                    minLines: null,
                     validator: _model.yourNameAccoountControllerValidator
                         .asValidator(context),
                   ),
@@ -386,11 +472,27 @@ class _Account0125WidgetState extends State<Account0125Widget> {
                       labelText: FFLocalizations.of(context).getText(
                         'u9mk91h9' /* Your Age */,
                       ),
-                      labelStyle: FlutterFlowTheme.of(context).bodySmall,
+                      labelStyle: FlutterFlowTheme.of(context)
+                          .bodySmall
+                          .override(
+                            fontFamily:
+                                FlutterFlowTheme.of(context).bodySmallFamily,
+                            letterSpacing: 0.0,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).bodySmallFamily),
+                          ),
                       hintText: FFLocalizations.of(context).getText(
                         'r6ovdlhl' /* i.e. 34 */,
                       ),
-                      hintStyle: FlutterFlowTheme.of(context).bodySmall,
+                      hintStyle: FlutterFlowTheme.of(context)
+                          .bodySmall
+                          .override(
+                            fontFamily:
+                                FlutterFlowTheme.of(context).bodySmallFamily,
+                            letterSpacing: 0.0,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).bodySmallFamily),
+                          ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: Color(0x00000000),
@@ -425,7 +527,14 @@ class _Account0125WidgetState extends State<Account0125Widget> {
                       contentPadding: EdgeInsetsDirectional.fromSTEB(
                           20.0, 24.0, 20.0, 24.0),
                     ),
-                    style: FlutterFlowTheme.of(context).bodyMedium,
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily:
+                              FlutterFlowTheme.of(context).bodyMediumFamily,
+                          letterSpacing: 0.0,
+                          useGoogleFonts: GoogleFonts.asMap().containsKey(
+                              FlutterFlowTheme.of(context).bodyMediumFamily),
+                        ),
+                    minLines: null,
                     keyboardType: TextInputType.number,
                     validator: _model.yourAgeAccoountControllerValidator
                         .asValidator(context),
@@ -485,7 +594,15 @@ class _Account0125WidgetState extends State<Account0125Widget> {
                       iconPadding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: Color(0xFF435F23),
-                      textStyle: FlutterFlowTheme.of(context).titleSmall,
+                      textStyle: FlutterFlowTheme.of(context)
+                          .titleSmall
+                          .override(
+                            fontFamily:
+                                FlutterFlowTheme.of(context).titleSmallFamily,
+                            letterSpacing: 0.0,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).titleSmallFamily),
+                          ),
                       elevation: 3.0,
                       borderSide: BorderSide(
                         color: Colors.transparent,
@@ -546,6 +663,7 @@ class _Account0125WidgetState extends State<Account0125Widget> {
                                       fontFamily: FlutterFlowTheme.of(context)
                                           .bodyMediumFamily,
                                       color: Color(0xFF435F23),
+                                      letterSpacing: 0.0,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
                                               FlutterFlowTheme.of(context)
@@ -563,6 +681,7 @@ class _Account0125WidgetState extends State<Account0125Widget> {
                                     fontFamily: FlutterFlowTheme.of(context)
                                         .bodyMediumFamily,
                                     color: Color(0xFF435F23),
+                                    letterSpacing: 0.0,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
                                             FlutterFlowTheme.of(context)
