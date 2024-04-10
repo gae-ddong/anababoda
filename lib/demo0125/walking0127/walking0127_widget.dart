@@ -14,16 +14,25 @@ import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 import 'walking0127_model.dart';
 export 'walking0127_model.dart';
-import 'package:sensors/sensors.dart';
+import 'package:sensors_plus/sensors_plus.dart';
+import 'package:shake/shake.dart';
+import 'dart:math';
 
 class Walking0127Widget extends StatefulWidget {
-  const Walking0127Widget({super.key});
+
+  final int walk;
+  const Walking0127Widget({required this.walk, Key? key}) : super(key : key);
 
   @override
   State<Walking0127Widget> createState() => _Walking0127WidgetState();
 }
 
-class _Walking0127WidgetState extends State<Walking0127Widget> {
+class _Walking0127WidgetState extends State<Walking0127Widget> with 
+TickerProviderStateMixin{
+  TabController? controller;
+  double threshold = 2.7; // 민감도
+  int walk = 1; // 초기 숫자
+  ShakeDetector? shakeDetector; // 흔들기 감지 함수
   late Walking0127Model _model;
 
   late List accelerometer;
@@ -34,6 +43,15 @@ class _Walking0127WidgetState extends State<Walking0127Widget> {
   @override
   void initState() {
     super.initState();
+
+    controller = TabController(length: 2, vsync: this);
+    controller!.addListener((tabListener));
+
+    shakeDetector = ShakeDetector.autoStart(
+      shakeSlopTimeMS: 100,
+      shakeThresholdGravity: threshold,
+      onPhoneShake: onPhoneShake,
+    );
 
     accelerometerEvents.listen((AccelerometerEvent e) {
       setState(() {
@@ -49,10 +67,19 @@ class _Walking0127WidgetState extends State<Walking0127Widget> {
     _model = createModel(context, () => Walking0127Model());
   }
 
+  tabListener(){
+    setState(() {
+    });
+  }
+
+  void onPhoneShake(){
+    walk+=1;
+  }
+
   @override
   void dispose() {
     _model.dispose();
-
+    controller!.removeListener((tabListener()));
     super.dispose();
   }
 
@@ -151,7 +178,7 @@ class _Walking0127WidgetState extends State<Walking0127Widget> {
                           ),
                           AuthUserStreamWidget(
                             builder: (context) => Text(
-                              accelerometer.toString(),
+                              walk.toString(),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
