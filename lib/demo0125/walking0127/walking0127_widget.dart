@@ -14,6 +14,7 @@ import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 import 'walking0127_model.dart';
 export 'walking0127_model.dart';
+import 'package:sensors/sensors.dart';
 
 class Walking0127Widget extends StatefulWidget {
   const Walking0127Widget({super.key});
@@ -25,11 +26,26 @@ class Walking0127Widget extends StatefulWidget {
 class _Walking0127WidgetState extends State<Walking0127Widget> {
   late Walking0127Model _model;
 
+  late List accelerometer;
+  late List gyroscope;
+
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
+
+    accelerometerEvents.listen((AccelerometerEvent e) {
+      setState(() {
+        accelerometer = <double>[e.x, e.y, e.z];
+      });
+    });
+
+     gyroscopeEvents.listen((GyroscopeEvent e) {
+      setState(() {
+        gyroscope = <double>[e.x, e.y, e.z];
+      });
+    });
     _model = createModel(context, () => Walking0127Model());
   }
 
@@ -135,12 +151,7 @@ class _Walking0127WidgetState extends State<Walking0127Widget> {
                           ),
                           AuthUserStreamWidget(
                             builder: (context) => Text(
-                              formatNumber(
-                                valueOrDefault(
-                                    currentUserDocument?.walkLog, 0.0),
-                                formatType: FormatType.decimal,
-                                decimalType: DecimalType.periodDecimal,
-                              ),
+                              accelerometer.toString(),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -168,11 +179,7 @@ class _Walking0127WidgetState extends State<Walking0127Widget> {
                           progressColor: Color(0xFF7C826C),
                           backgroundColor: FlutterFlowTheme.of(context).accent4,
                           center: Text(
-                            formatNumber(
-                              functions.walkCal(valueOrDefault(
-                                  currentUserDocument?.walkLog, 0.0)),
-                              formatType: FormatType.percent,
-                            ),
+                            gyroscope.toString(),
                             style: FlutterFlowTheme.of(context)
                                 .headlineSmall
                                 .override(
