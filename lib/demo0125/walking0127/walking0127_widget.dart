@@ -35,8 +35,8 @@ TickerProviderStateMixin{
   ShakeDetector? shakeDetector; // 흔들기 감지 함수
   late Walking0127Model _model;
 
-  late List accelerometer;
-  late List gyroscope;
+  late List accelerometer = [];
+  late List gyroscope = [];
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
