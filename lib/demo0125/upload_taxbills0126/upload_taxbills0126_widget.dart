@@ -1,3 +1,9 @@
+import 'dart:convert';
+import 'dart:io';
+
+import 'package:image_picker/image_picker.dart';
+import 'package:http/http.dart' as http;
+
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/firebase_storage/storage.dart';
@@ -40,6 +46,28 @@ class _UploadTaxbills0126WidgetState extends State<UploadTaxbills0126Widget> {
 
     super.dispose();
   }
+
+  String parsedtext = '';
+
+  Future _getFromGallery() async {
+    final pickedFile = await ImagePicker().pickImage(source: ImageSource.gallery);
+    if (pickedFile == null) return;
+
+    var bytes = File(pickedFile.path.toString()).readAsBytesSync();
+    String img64 = base64Encode(bytes);
+
+    var url = 'https://api.ocr.space/parse/image';
+    var payload = {"base64Image": "data:image/jpg;base64,${img64.toString()}","language" :"kor"};
+    var header = {"apikey" :"발급받은 키 번호"};
+
+    var post = await http.post(Uri.parse(url),body: payload,headers: header);
+    var result = jsonDecode(post.body);
+
+    setState(() {
+      parsedtext = result['ParsedResults'][0]['ParsedText'];
+    });
+  }
+  
 
   @override
   Widget build(BuildContext context) {
@@ -154,12 +182,7 @@ class _UploadTaxbills0126WidgetState extends State<UploadTaxbills0126Widget> {
                         text: TextSpan(
                           children: [
                             TextSpan(
-                              text: FFLocalizations.of(context).getText(
-                                'sqwl653v' /* 고지서를 업로드 해주세요.
-
- */
-                                ,
-                              ),
+                              text: parsedtext,
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -194,6 +217,10 @@ class _UploadTaxbills0126WidgetState extends State<UploadTaxbills0126Widget> {
                         ),
                         textAlign: TextAlign.center,
                       ),
+                    ),
+                    Text(
+                      parsedtext,
+                      style: TextStyle(fontSize: 16),
                     ),
                   ],
                 ),
@@ -383,25 +410,7 @@ class _UploadTaxbills0126WidgetState extends State<UploadTaxbills0126Widget> {
                 ),
                 FFButtonWidget(
                   onPressed: () async {
-                    await currentUserReference!.update(createUsersRecordData(
-                      photoUrl: _model.uploadedFileUrl,
-                    ));
-                    await showDialog(
-                      context: context,
-                      builder: (alertDialogContext) {
-                        return AlertDialog(
-                          title: Text('업로드가 완료'),
-                          content: Text('이상한거 올리기만 해봐라~ 법정에서 보는겨'),
-                          actions: [
-                            TextButton(
-                              onPressed: () =>
-                                  Navigator.pop(alertDialogContext),
-                              child: Text('알겠어'),
-                            ),
-                          ],
-                        );
-                      },
-                    );
+                    _getFromGallery();
                   },
                   text: FFLocalizations.of(context).getText(
                     '6s8n4lx0' /* 업로드 하기 */,
