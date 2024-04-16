@@ -33,7 +33,7 @@ TickerProviderStateMixin{
   double threshold = 2.7; // 민감도
   int walk = 1; // 초기 숫자
   ShakeDetector? shakeDetector; // 흔들기 감지 함수
-  late Walking0127Model _model;
+  late Walking0127Model _model; // 모델
 
   late List accelerometer = [];
   late List gyroscope = [];
