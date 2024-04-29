@@ -13,15 +13,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 import 'walking0127_model.dart';
-export 'walking0127_model.dart';
 import 'package:sensors_plus/sensors_plus.dart';
 import 'package:shake/shake.dart';
 import 'dart:math';
 
 class Walking0127Widget extends StatefulWidget {
 
-  final int walk;
-  const Walking0127Widget({required this.walk, Key? key}) : super(key : key);
+  // final int walkLog;
+  // const Walking0127Widget({required this.walkLog, Key? key}) : super(key : key);
 
   @override
   State<Walking0127Widget> createState() => _Walking0127WidgetState();
@@ -31,7 +30,7 @@ class _Walking0127WidgetState extends State<Walking0127Widget> with
 TickerProviderStateMixin{
   TabController? controller;
   double threshold = 2.7; // 민감도
-  int walk = 1; // 초기 숫자
+  // int walkLog = 1; // 초기 숫자
   ShakeDetector? shakeDetector; // 흔들기 감지 함수
   late Walking0127Model _model; // 모델
 
@@ -53,18 +52,18 @@ TickerProviderStateMixin{
       onPhoneShake: onPhoneShake,
     );
 
-    accelerometerEvents.listen((AccelerometerEvent e) {
-      setState(() {
-        accelerometer = <double>[e.x, e.y, e.z];
-      });
-    });
+    // accelerometerEvents.listen((AccelerometerEvent e) {
+    //   setState(() {
+    //     accelerometer = <double>[e.x, e.y, e.z];
+    //   });
+    // });
 
-     gyroscopeEvents.listen((GyroscopeEvent e) {
-      setState(() {
-        gyroscope = <double>[e.x, e.y, e.z];
-      });
-    });
-    _model = createModel(context, () => Walking0127Model());
+    //  gyroscopeEvents.listen((GyroscopeEvent e) {
+    //   setState(() {
+    //     gyroscope = <double>[e.x, e.y, e.z];
+    //   });
+    // });
+    // _model = createModel(context, () => Walking0127Model());
   }
 
   tabListener(){
@@ -72,8 +71,14 @@ TickerProviderStateMixin{
     });
   }
 
-  void onPhoneShake(){
-    walk+=1;
+  void onPhoneShake() async {
+      await currentUserReference!.update({
+        ...mapToFirestore(
+          {
+            'walkLog': FieldValue.increment(1),
+          },
+        ),
+      });
   }
 
   @override
@@ -178,7 +183,12 @@ TickerProviderStateMixin{
                           ),
                           AuthUserStreamWidget(
                             builder: (context) => Text(
-                              walk.toString(),
+                              formatNumber(
+                                valueOrDefault(
+                                    currentUserDocument?.walkLog, 0.0),
+                                formatType: FormatType.decimal,
+                                decimalType: DecimalType.periodDecimal,
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -206,7 +216,14 @@ TickerProviderStateMixin{
                           progressColor: Color(0xFF7C826C),
                           backgroundColor: FlutterFlowTheme.of(context).accent4,
                           center: Text(
-                            gyroscope.toString(),
+                            formatNumber(
+                                          valueOrDefault(
+                                              currentUserDocument?.walkLog,
+                                              0)/100,
+                                          formatType: FormatType.decimal,
+                                          decimalType:
+                                              DecimalType.periodDecimal,
+                            ),
                             style: FlutterFlowTheme.of(context)
                                 .headlineSmall
                                 .override(
@@ -293,7 +310,7 @@ TickerProviderStateMixin{
                                                 (valueOrDefault(
                                                         currentUserDocument
                                                             ?.walkLog,
-                                                        0.0) <
+                                                        0.0) <= //< -> <=
                                                     10000.0)
                                             ? 0
                                             : 20),
@@ -338,7 +355,7 @@ TickerProviderStateMixin{
                                             0.0) >=
                                         10000.0
                                     ? getCurrentTimestamp
-                                    : buttonDateRecord?.createdTimeW,
+                                    : buttonDateRecord.createdTimeW,
                               ));
                             },
                             text: FFLocalizations.of(context).getText(
