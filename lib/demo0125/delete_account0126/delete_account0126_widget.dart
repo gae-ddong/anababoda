@@ -29,11 +29,11 @@ class _DeleteAccount0126WidgetState extends State<DeleteAccount0126Widget> {
     super.initState();
     _model = createModel(context, () => DeleteAccount0126Model());
 
-    _model.currentPasswordController ??= TextEditingController();
+    _model.currentPasswordTextController ??= TextEditingController();
     _model.currentPasswordFocusNode ??= FocusNode();
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {
-          _model.currentPasswordController?.text =
+          _model.currentPasswordTextController?.text =
               FFLocalizations.of(context).getText(
             '79p29vp1' /* 비밀번호를 입력해주세요. */,
           );
@@ -124,7 +124,7 @@ class _DeleteAccount0126WidgetState extends State<DeleteAccount0126Widget> {
                   padding:
                       EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
                   child: TextFormField(
-                    controller: _model.currentPasswordController,
+                    controller: _model.currentPasswordTextController,
                     focusNode: _model.currentPasswordFocusNode,
                     obscureText: false,
                     decoration: InputDecoration(
@@ -194,8 +194,7 @@ class _DeleteAccount0126WidgetState extends State<DeleteAccount0126Widget> {
                           useGoogleFonts: GoogleFonts.asMap().containsKey(
                               FlutterFlowTheme.of(context).bodySmallFamily),
                         ),
-                    minLines: null,
-                    validator: _model.currentPasswordControllerValidator
+                    validator: _model.currentPasswordTextControllerValidator
                         .asValidator(context),
                   ),
                 ),
@@ -294,6 +293,10 @@ class _DeleteAccount0126WidgetState extends State<DeleteAccount0126Widget> {
                             onChanged: (newValue) async {
                               setState(() => _model.checkboxValue = newValue!);
                             },
+                            side: BorderSide(
+                              width: 2,
+                              color: FlutterFlowTheme.of(context).secondaryText,
+                            ),
                             activeColor: FlutterFlowTheme.of(context).primary,
                             checkColor: FlutterFlowTheme.of(context).info,
                           ),

@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -179,98 +180,12 @@ class _Mission0125WidgetState extends State<Mission0125Widget> {
             ),
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
-              child: InkWell(
-                splashColor: Colors.transparent,
-                focusColor: Colors.transparent,
-                hoverColor: Colors.transparent,
-                highlightColor: Colors.transparent,
-                onTap: () async {
-                  context.pushNamed('attendance0125');
-                },
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    FlutterFlowIconButton(
-                      borderColor: Colors.transparent,
-                      borderRadius: 20.0,
-                      borderWidth: 1.0,
-                      buttonSize: 68.0,
-                      fillColor: Colors.transparent,
-                      icon: Icon(
-                        Icons.calendar_month,
-                        color: Color(0xFF7C826C),
-                        size: 50.0,
-                      ),
-                      onPressed: () {
-                        print('IconButton pressed ...');
-                      },
-                    ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
-                      child: Container(
-                        width: 200.0,
-                        height: 100.0,
-                        decoration: BoxDecoration(
-                          color: FlutterFlowTheme.of(context).primaryBackground,
-                        ),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              FFLocalizations.of(context).getText(
-                                'gybh9i2w' /* 지금 출석하면 */,
-                              ),
-                              style: FlutterFlowTheme.of(context)
-                                  .headlineSmall
-                                  .override(
-                                    fontFamily: 'gowum',
-                                    fontSize: 15.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.w500,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey('gowum'),
-                                  ),
-                            ),
-                            Text(
-                              FFLocalizations.of(context).getText(
-                                'l3fnkcyv' /* 1 발자국 */,
-                              ),
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'gowum',
-                                    fontSize: 20.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.w600,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey('gowum'),
-                                  ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
-                      child: FaIcon(
-                        FontAwesomeIcons.angleRight,
-                        color: FlutterFlowTheme.of(context).secondaryText,
-                        size: 30.0,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
-              child: StreamBuilder<List<DateRecord>>(
-                stream: queryDateRecord(
+              child: StreamBuilder<List<AttendanceRecord>>(
+                stream: queryAttendanceRecord(
+                  queryBuilder: (attendanceRecord) => attendanceRecord.where(
+                    'email',
+                    isEqualTo: currentUserEmail,
+                  ),
                   singleRecord: true,
                 ),
                 builder: (context, snapshot) {
@@ -287,13 +202,14 @@ class _Mission0125WidgetState extends State<Mission0125Widget> {
                       ),
                     );
                   }
-                  List<DateRecord> rowDateRecordList = snapshot.data!;
+                  List<AttendanceRecord> rowAttendanceRecordList =
+                      snapshot.data!;
                   // Return an empty Container when the item does not exist.
                   if (snapshot.data!.isEmpty) {
                     return Container();
                   }
-                  final rowDateRecord = rowDateRecordList.isNotEmpty
-                      ? rowDateRecordList.first
+                  final rowAttendanceRecord = rowAttendanceRecordList.isNotEmpty
+                      ? rowAttendanceRecordList.first
                       : null;
                   return InkWell(
                     splashColor: Colors.transparent,
@@ -301,55 +217,185 @@ class _Mission0125WidgetState extends State<Mission0125Widget> {
                     hoverColor: Colors.transparent,
                     highlightColor: Colors.transparent,
                     onTap: () async {
-                      await currentUserReference!.update({
-                        ...mapToFirestore(
-                          {
-                            'footprint': FieldValue.increment(dateTimeFormat(
-                                      'yMd',
-                                      rowDateRecord?.createdTimeS,
-                                      locale: FFLocalizations.of(context)
-                                          .languageCode,
-                                    ) ==
-                                    dateTimeFormat(
-                                      'yMd',
-                                      getCurrentTimestamp,
-                                      locale: FFLocalizations.of(context)
-                                          .languageCode,
-                                    )
-                                ? 0
-                                : 2),
+                      context.pushNamed('attendance0125');
+
+                      await rowAttendanceRecord!.reference
+                          .update(createAttendanceRecordData(
+                        checkSeven: functions
+                            .checkSeven(rowAttendanceRecord!.startDate!),
+                      ));
+
+                      await rowAttendanceRecord!.reference
+                          .update(createAttendanceRecordData(
+                        startDate: functions.updateStartdate(
+                            rowAttendanceRecord!.startDate!,
+                            rowAttendanceRecord!.checkSeven),
+                        dateCheck: valueOrDefault<int>(
+                          functions.updateDateCheck(
+                              rowAttendanceRecord!.dateCheck,
+                              rowAttendanceRecord!.checkSeven),
+                          0,
+                        ),
+                        checkSeven: false,
+                      ));
+                    },
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        FlutterFlowIconButton(
+                          borderColor: Colors.transparent,
+                          borderRadius: 20.0,
+                          borderWidth: 1.0,
+                          buttonSize: 68.0,
+                          fillColor: Colors.transparent,
+                          icon: Icon(
+                            Icons.calendar_month,
+                            color: Color(0xFF7C826C),
+                            size: 50.0,
+                          ),
+                          onPressed: () {
+                            print('IconButton pressed ...');
                           },
                         ),
-                      });
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              20.0, 0.0, 0.0, 0.0),
+                          child: Container(
+                            width: 200.0,
+                            height: 100.0,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context)
+                                  .primaryBackground,
+                            ),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  FFLocalizations.of(context).getText(
+                                    'gybh9i2w' /* 지금 출석하면 */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .headlineSmall
+                                      .override(
+                                        fontFamily: 'gowum',
+                                        fontSize: 15.0,
+                                        letterSpacing: 0.0,
+                                        fontWeight: FontWeight.w500,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey('gowum'),
+                                      ),
+                                ),
+                                Text(
+                                  FFLocalizations.of(context).getText(
+                                    'l3fnkcyv' /* 1 발자국 */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'gowum',
+                                        fontSize: 20.0,
+                                        letterSpacing: 0.0,
+                                        fontWeight: FontWeight.w600,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey('gowum'),
+                                      ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 10.0, 0.0),
+                          child: FaIcon(
+                            FontAwesomeIcons.angleRight,
+                            color: FlutterFlowTheme.of(context).secondaryText,
+                            size: 30.0,
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+              child: StreamBuilder<List<MissionShopRecord>>(
+                stream: queryMissionShopRecord(
+                  queryBuilder: (missionShopRecord) => missionShopRecord.where(
+                    'email',
+                    isEqualTo: currentUserEmail,
+                  ),
+                  singleRecord: true,
+                ),
+                builder: (context, snapshot) {
+                  // Customize what your widget looks like when it's loading.
+                  if (!snapshot.hasData) {
+                    return Center(
+                      child: SizedBox(
+                        width: 60.0,
+                        height: 60.0,
+                        child: SpinKitPulse(
+                          color: Color(0xFF435F23),
+                          size: 60.0,
+                        ),
+                      ),
+                    );
+                  }
+                  List<MissionShopRecord> rowMissionShopRecordList =
+                      snapshot.data!;
+                  // Return an empty Container when the item does not exist.
+                  if (snapshot.data!.isEmpty) {
+                    return Container();
+                  }
+                  final rowMissionShopRecord =
+                      rowMissionShopRecordList.isNotEmpty
+                          ? rowMissionShopRecordList.first
+                          : null;
+                  return InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      if (dateTimeFormat(
+                            'yMd',
+                            rowMissionShopRecord?.createdTimeS,
+                            locale: FFLocalizations.of(context).languageCode,
+                          ) !=
+                          dateTimeFormat(
+                            'yMd',
+                            getCurrentTimestamp,
+                            locale: FFLocalizations.of(context).languageCode,
+                          )) {
+                        await currentUserReference!.update({
+                          ...mapToFirestore(
+                            {
+                              'footprint': FieldValue.increment(2),
+                            },
+                          ),
+                        });
 
-                      await FootprintsLogRecord.collection
-                          .doc()
-                          .set(createFootprintsLogRecordData(
-                            email: currentUserEmail,
-                            from: 'visit shop',
-                            time: getCurrentTimestamp,
-                            footLog: dateTimeFormat(
-                                      'yMd',
-                                      rowDateRecord?.createdTimeS,
-                                      locale: FFLocalizations.of(context)
-                                          .languageCode,
-                                    ) ==
-                                    dateTimeFormat(
-                                      'yMd',
-                                      getCurrentTimestamp,
-                                      locale: FFLocalizations.of(context)
-                                          .languageCode,
-                                    )
-                                ? 0
-                                : 2,
-                          ));
+                        await FootprintsLogRecord.collection
+                            .doc()
+                            .set(createFootprintsLogRecordData(
+                              email: currentUserEmail,
+                              from: 'visit shop',
+                              time: getCurrentTimestamp,
+                              footLog: 2,
+                            ));
+
+                        await rowMissionShopRecord!.reference
+                            .update(createMissionShopRecordData(
+                          createdTimeS: getCurrentTimestamp,
+                        ));
+                      }
 
                       context.pushNamed('shoppinglist0126');
-
-                      await rowDateRecord!.reference
-                          .update(createDateRecordData(
-                        createdTimeS: getCurrentTimestamp,
-                      ));
                     },
                     child: Row(
                       mainAxisSize: MainAxisSize.max,

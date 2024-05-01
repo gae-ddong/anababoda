@@ -15,8 +15,9 @@ class DeleteAccount0126Model extends FlutterFlowModel<DeleteAccount0126Widget> {
 
   // State field(s) for current_password widget.
   FocusNode? currentPasswordFocusNode;
-  TextEditingController? currentPasswordController;
-  String? Function(BuildContext, String?)? currentPasswordControllerValidator;
+  TextEditingController? currentPasswordTextController;
+  String? Function(BuildContext, String?)?
+      currentPasswordTextControllerValidator;
   // State field(s) for Checkbox widget.
   bool? checkboxValue;
 
@@ -26,6 +27,6 @@ class DeleteAccount0126Model extends FlutterFlowModel<DeleteAccount0126Widget> {
   @override
   void dispose() {
     currentPasswordFocusNode?.dispose();
-    currentPasswordController?.dispose();
+    currentPasswordTextController?.dispose();
   }
 }

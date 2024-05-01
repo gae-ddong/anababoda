@@ -19,28 +19,12 @@ class Firstlogin0125Model extends FlutterFlowModel<Firstlogin0125Widget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  // State field(s) for emailAddress_login widget.
-  FocusNode? emailAddressLoginFocusNode;
-  TextEditingController? emailAddressLoginController;
-  String? Function(BuildContext, String?)? emailAddressLoginControllerValidator;
-  // State field(s) for password_login widget.
-  FocusNode? passwordLoginFocusNode;
-  TextEditingController? passwordLoginController;
-  late bool passwordLoginVisibility;
-  String? Function(BuildContext, String?)? passwordLoginControllerValidator;
 
   @override
-  void initState(BuildContext context) {
-    passwordLoginVisibility = false;
-  }
+  void initState(BuildContext context) {}
 
   @override
   void dispose() {
     unfocusNode.dispose();
-    emailAddressLoginFocusNode?.dispose();
-    emailAddressLoginController?.dispose();
-
-    passwordLoginFocusNode?.dispose();
-    passwordLoginController?.dispose();
   }
 }

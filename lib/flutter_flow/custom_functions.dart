@@ -92,3 +92,38 @@ int add(
 ) {
   return abs + k;
 }
+
+bool checkSeven(DateTime exstartdate) {
+  final today = DateTime.now();
+  bool result = false;
+  if (today.difference(exstartdate).inDays >= 7) {
+    result = true;
+  }
+  return result;
+}
+
+DateTime updateStartdate(
+  DateTime exStartdate,
+  bool checkSeven,
+) {
+  final today = DateTime.now();
+
+  if (checkSeven == false) {
+    return today;
+  } else {
+    return exStartdate;
+  }
+}
+
+int updateDateCheck(
+  int dateCheck,
+  bool checkSeven,
+) {
+  final today = DateTime.now();
+
+  if (checkSeven == false) {
+    dateCheck = 0;
+  }
+
+  return dateCheck;
+}

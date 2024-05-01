@@ -89,16 +89,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               appStateNotifier.loggedIn ? NavBarPage() : Firstlogin0125Widget(),
         ),
         FFRoute(
-          name: 'account0125',
-          path: '/account0125',
-          builder: (context, params) => Account0125Widget(
-            yourname: params.getParam(
-              'yourname',
-              ParamType.String,
-            ),
-          ),
-        ),
-        FFRoute(
           name: 'homepage0125',
           path: '/homepage0125',
           builder: (context, params) => params.isEmpty
@@ -119,8 +109,8 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   userProfile: params.getParam(
                     'userProfile',
                     ParamType.DocumentReference,
-                    false,
-                    ['users'],
+                    isList: false,
+                    collectionNamePath: ['account'],
                   ),
                 ),
         ),
@@ -131,8 +121,8 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             userProfile: params.getParam(
               'userProfile',
               ParamType.DocumentReference,
-              false,
-              ['users'],
+              isList: false,
+              collectionNamePath: ['account'],
             ),
           ),
         ),
@@ -142,24 +132,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => Firstlogin0125Widget(),
         ),
         FFRoute(
-          name: 'forgot0125',
-          path: '/forgot0125',
-          builder: (context, params) => Forgot0125Widget(),
-        ),
-        FFRoute(
           name: 'shoppinglist0126',
           path: '/shoppinglist0126',
           builder: (context, params) => Shoppinglist0126Widget(),
-        ),
-        FFRoute(
-          name: 'search0126',
-          path: '/search0126',
-          builder: (context, params) => Search0126Widget(),
-        ),
-        FFRoute(
-          name: 'changePW0126',
-          path: '/changePW0126',
-          builder: (context, params) => ChangePW0126Widget(),
         ),
         FFRoute(
           name: 'deleteAccount0126',
@@ -192,16 +167,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => Editaddress0127Widget(),
         ),
         FFRoute(
-          name: 'giftcertificate0127',
-          path: '/giftcertificate0127',
-          builder: (context, params) => Giftcertificate0127Widget(),
-        ),
-        FFRoute(
-          name: 'myGiftcertificate0127',
-          path: '/myGiftcertificate0127',
-          builder: (context, params) => MyGiftcertificate0127Widget(),
-        ),
-        FFRoute(
           name: 'footprintlist0127',
           path: '/footprintlist0127',
           builder: (context, params) => Footprintlist0127Widget(),
@@ -222,11 +187,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'alarm0203',
           path: '/alarm0203',
           builder: (context, params) => Alarm0203Widget(),
-        ),
-        FFRoute(
-          name: 'information',
-          path: '/information',
-          builder: (context, params) => InformationWidget(),
         ),
         FFRoute(
           name: 'uploadTransport0318',
@@ -313,7 +273,7 @@ extension _GoRouterStateExtensions on GoRouterState {
       extra != null ? extra as Map<String, dynamic> : {};
   Map<String, dynamic> get allParams => <String, dynamic>{}
     ..addAll(pathParameters)
-    ..addAll(queryParameters)
+    ..addAll(uri.queryParameters)
     ..addAll(extraMap);
   TransitionInfo get transitionInfo => extraMap.containsKey(kTransitionInfoKey)
       ? extraMap[kTransitionInfoKey] as TransitionInfo
@@ -332,7 +292,7 @@ class FFParameters {
   // present is the special extra parameter reserved for the transition info.
   bool get isEmpty =>
       state.allParams.isEmpty ||
-      (state.extraMap.length == 1 &&
+      (state.allParams.length == 1 &&
           state.extraMap.containsKey(kTransitionInfoKey));
   bool isAsyncParam(MapEntry<String, dynamic> param) =>
       asyncParams.containsKey(param.key) && param.value is String;
@@ -353,10 +313,10 @@ class FFParameters {
 
   dynamic getParam<T>(
     String paramName,
-    ParamType type, [
+    ParamType type, {
     bool isList = false,
     List<String>? collectionNamePath,
-  ]) {
+  }) {
     if (futureParamValues.containsKey(paramName)) {
       return futureParamValues[paramName];
     }
@@ -406,7 +366,7 @@ class FFRoute {
           }
 
           if (requireAuth && !appStateNotifier.loggedIn) {
-            appStateNotifier.setRedirectLocationIfUnset(state.location);
+            appStateNotifier.setRedirectLocationIfUnset(state.uri.toString());
             return '/firstlogin0125';
           }
           return null;
@@ -484,7 +444,7 @@ class RootPageContext {
   static bool isInactiveRootPage(BuildContext context) {
     final rootPageContext = context.read<RootPageContext?>();
     final isRootPage = rootPageContext?.isRootPage ?? false;
-    final location = GoRouter.of(context).location;
+    final location = GoRouterState.of(context).uri.toString();
     return isRootPage &&
         location != '/' &&
         location != rootPageContext?.errorRoute;

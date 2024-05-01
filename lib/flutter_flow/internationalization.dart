@@ -108,121 +108,6 @@ Locale createLocale(String language) => language.contains('_')
     : Locale(language);
 
 final kTranslationsMap = <Map<String, Map<String, String>>>[
-  // account0125
-  {
-    'jbsxh8kk': {
-      'en': '회원가입',
-      'ar': 'البدء',
-      'de': 'Loslegen',
-      'es': 'Empezar',
-      'ko': '회원가입',
-    },
-    'ct6st7dq': {
-      'en': 'Email Address',
-      'ar': 'عنوان البريد الالكترونى',
-      'de': 'E-Mail-Addresse',
-      'es': 'Dirección de correo electrónico',
-      'ko': 'Email Address',
-    },
-    'qwijjyim': {
-      'en': 'Enter your email...',
-      'ar': 'أدخل بريدك الإلكتروني ...',
-      'de': 'Geben sie ihre E-Mail Adresse ein...',
-      'es': 'Introduce tu correo electrónico...',
-      'ko': 'Enter your email...',
-    },
-    'i9gg93q5': {
-      'en': 'Password',
-      'ar': 'كلمة المرور',
-      'de': 'Passwort',
-      'es': 'Contraseña',
-      'ko': 'Password',
-    },
-    's56sp9yc': {
-      'en': 'Enter your password...',
-      'ar': 'ادخل رقمك السري...',
-      'de': 'Geben Sie Ihr Passwort ein...',
-      'es': 'Ingresa tu contraseña...',
-      'ko': 'Enter your password...',
-    },
-    '25rksdmx': {
-      'en': 'Confirm Password',
-      'ar': 'تأكيد كلمة المرور',
-      'de': 'Kennwort bestätigen',
-      'es': 'Confirmar contraseña',
-      'ko': 'Confirm Password',
-    },
-    'h8z5jgyh': {
-      'en': 'Enter your password...',
-      'ar': 'ادخل رقمك السري...',
-      'de': 'Geben Sie Ihr Passwort ein...',
-      'es': 'Ingresa tu contraseña...',
-      'ko': 'Enter your password...',
-    },
-    'mzgf9dig': {
-      'en': '',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-    '32pgygog': {
-      'en': 'Your Name',
-      'ar': 'اسمك',
-      'de': 'Dein Name',
-      'es': 'Tu nombre',
-      'ko': 'Your Name',
-    },
-    'y7t68u6i': {
-      'en': 'Enter your name...',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': 'Enter your name...',
-    },
-    'u9mk91h9': {
-      'en': 'Your Age',
-      'ar': 'عمرك',
-      'de': 'Ihr Alter',
-      'es': 'Su edad',
-      'ko': 'Your Age',
-    },
-    'r6ovdlhl': {
-      'en': 'i.e. 34',
-      'ar': 'أي 34',
-      'de': 'dh 34',
-      'es': 'es decir, 34',
-      'ko': 'i.e. 34',
-    },
-    'eqc6y92k': {
-      'en': '다음',
-      'ar': 'إنشاء حساب',
-      'de': 'Benutzerkonto erstellen',
-      'es': 'Crear una cuenta',
-      'ko': '다음',
-    },
-    'ooxb5xth': {
-      'en': 'Login',
-      'ar': 'هل لديك حساب؟',
-      'de': 'Sie haben bereits ein Konto?',
-      'es': '¿Ya tienes una cuenta?',
-      'ko': 'Login',
-    },
-    'cpvrho0m': {
-      'en': '계정이 이미 있나요?',
-      'ar': 'هل لديك حساب؟',
-      'de': 'Sie haben bereits ein Konto?',
-      'es': '¿Ya tienes una cuenta?',
-      'ko': '계정이 이미 있나요?',
-    },
-    'momge5oj': {
-      'en': 'Home',
-      'ar': 'مسكن',
-      'de': 'Heim',
-      'es': 'Casa',
-      'ko': '',
-    },
-  },
   // homepage0125
   {
     'xn2so8km': {
@@ -241,7 +126,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'dplhmclv': {
       'en': '발자국',
-      'ar': '',
+      'ar': '벨재국',
       'de': '',
       'es': '',
       'ko': '발자국',
@@ -399,47 +284,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // mypage0125
   {
-    '9b1un8aj': {
-      'en': '적립 발자국',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '적립 발자국',
-    },
-    'lyyoi4yn': {
-      'en': '발자국',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '발자국',
-    },
-    'd2dgf8me': {
-      'en': '상품권',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '상품권',
-    },
-    '68xuihpy': {
-      'en': '장',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '장',
-    },
     'i61y9ibx': {
       'en': '프로필 설정',
       'ar': 'تعديل الملف الشخصي',
       'de': 'Profil bearbeiten',
       'es': 'Editar perfil',
       'ko': '프로필 설정',
-    },
-    '03k0vw86': {
-      'en': '비밀번호 변경',
-      'ar': 'تغيير كلمة المرور',
-      'de': 'Kennwort ändern',
-      'es': 'Cambia la contraseña',
-      'ko': '비밀번호 변경',
     },
     '6w6wv95p': {
       'en': '알림설정',
@@ -525,46 +375,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // firstlogin0125
   {
     'b1e16gzg': {
-      'en': 'Ecoing',
+      'en': 'Ecoing\n',
       'ar': '',
       'de': '',
       'es': '',
       'ko': 'Ecoing',
-    },
-    '8fry1hxy': {
-      'en': 'Email',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': 'Email',
-    },
-    'qy9wutvi': {
-      'en': 'Password',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': 'Password',
-    },
-    'dhjdd5jg': {
-      'en': '로그인',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '로그인',
-    },
-    'rd7y8vj9': {
-      'en': '비밀번호 찾기',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '비밀번호 찾기',
-    },
-    '1z0dfcua': {
-      'en': '회원가입',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '회원가입',
     },
     '017bo1eh': {
       'en': 'Continue with Google',
@@ -573,68 +388,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': '',
       'ko': 'Continue with Google',
     },
-    '4x7cc31h': {
-      'en': 'Button',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
     'u7qxvujc': {
-      'en': 'Home',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-  },
-  // forgot0125
-  {
-    'imv2qbyh': {
-      'en': 'Back',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-    'vzd9tx87': {
-      'en': '비밀번호 찾기',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '비밀번호 찾기',
-    },
-    'gjjhtnvy': {
-      'en':
-          '비밀번호를 재설정할 수 있는 링크가 포함된 이메일을 보내드리겠습니다. 아래에 귀하의 계정과 연결된 이메일을 입력하세요.',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko':
-          '비밀번호를 재설정할 수 있는 링크가 포함된 이메일을 보내드리겠습니다. 아래에 귀하의 계정과 연결된 이메일을 입력하세요.',
-    },
-    '7lop81el': {
-      'en': 'Your email address...',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-    'ek93rgwu': {
-      'en': 'Enter your email...',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-    'pokqfn3p': {
-      'en': '링크 보내기',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '링크 보내기',
-    },
-    't4102jse': {
       'en': 'Home',
       'ar': '',
       'de': '',
@@ -820,61 +574,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ko': '',
     },
   },
-  // search0126
-  {
-    'oe31ybqi': {
-      'en': '검색',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-    '5q2buly9': {
-      'en': 'Home',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-  },
-  // changePW0126
-  {
-    'yc2xq5qu': {
-      'en': 'current email',
-      'ar': 'عنوان البريد الالكترونى',
-      'de': 'E-Mail-Addresse',
-      'es': 'Dirección de correo electrónico',
-      'ko': 'current email',
-    },
-    'pbmxykaf': {
-      'en': '현재 이메일을 입력해주세요.',
-      'ar': 'أدخل بريدك الإلكتروني ...',
-      'de': 'Geben sie ihre E-Mail Adresse ein...',
-      'es': 'Introduce tu correo electrónico...',
-      'ko': '',
-    },
-    'ymz7imyp': {
-      'en': '비밀번호 변경하기',
-      'ar': 'إنشاء حساب',
-      'de': 'Benutzerkonto erstellen',
-      'es': 'Crear una cuenta',
-      'ko': '비밀번호 변경하기',
-    },
-    'uk29lcfn': {
-      'en': '비밀번호 변경',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '비밀번호 변경',
-    },
-    '738i2zeo': {
-      'en': 'Home',
-      'ar': 'مسكن',
-      'de': 'Heim',
-      'es': 'Casa',
-      'ko': '',
-    },
-  },
   // deleteAccount0126
   {
     '2ez28p3q': {
@@ -1027,6 +726,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '98rhv3pw': {
       'en': 'jpeg, png만 업로드 가능합니다.',
+      'ar': '',
+      'de': '',
+      'es': '',
+      'ko': '',
+    },
+    'fgywpyfr': {
+      'en': 'Hello World',
       'ar': '',
       'de': '',
       'es': '',
@@ -1224,215 +930,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ko': '',
     },
   },
-  // giftcertificate0127
-  {
-    'hc6rckir': {
-      'en': '교환하기',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '교환하기',
-    },
-    'sizn79dx': {
-      'en': '보유 발자국',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '보유 발자국',
-    },
-    'dwu6e0nk': {
-      'en': '발자국',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '발자국',
-    },
-    'iehnynn9': {
-      'en': '모두보기',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '모두보기',
-    },
-    'tzdz73ep': {
-      'en': '상품을 선택해주세요.',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '상품을 선택해주세요.',
-    },
-    'gttlphhs': {
-      'en': '온누리상품권 30,000원권',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '온누리상품권 30,000원권',
-    },
-    'sv4pykyt': {
-      'en': '(충청도) 30,000발자국',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-    '22cgkfif': {
-      'en': '지역사랑상품권 10,000원권',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '지역사랑상품권 10,000원권',
-    },
-    '6cb4yr77': {
-      'en': '(수원) 10,000발자국',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '(수원) 10,000발자국',
-    },
-    'fid5qqk3': {
-      'en': '30000원 이하',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '30000원 이하',
-    },
-    'sx1ouxmt': {
-      'en': 'Tab View 2',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-    'jozxv624': {
-      'en': '50000원 이하',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '50000원 이하',
-    },
-    'h557442v': {
-      'en': 'Tab View 3',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-    '8vbe2azq': {
-      'en': '전체 선택 취소',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '전체 선택 취소',
-    },
-    'e4znc43v': {
-      'en': '선택 상품 교환',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '선택 상품 교환',
-    },
-    '40snwj31': {
-      'en': 'Home',
-      'ar': 'مسكن',
-      'de': 'Heim',
-      'es': 'Casa',
-      'ko': '',
-    },
-  },
-  // myGiftcertificate0127
-  {
-    'rypsrund': {
-      'en': '교환하기',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '교환하기',
-    },
-    '1iwj9cds': {
-      'en': '보유 발자국',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '보유 발자국',
-    },
-    'acpkh738': {
-      'en': '발자국',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '발자국',
-    },
-    'nt8larav': {
-      'en': '온누리상품권\n',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-    'fecquj1b': {
-      'en': '(충청도) 20,000원',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-    'ukr0f436': {
-      'en': '교환',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-    'ja3yk0f4': {
-      'en': '나라사랑상품권\n',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-    '5lasd0sr': {
-      'en': '(전주) 20,000원',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-    'q7gi1sr6': {
-      'en': '교환',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-    'ml0fopha': {
-      'en': '시장상품권\n',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-    'z4nb3z3k': {
-      'en': '(수원) 50,000원',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-    'lpaxttxk': {
-      'en': '교환',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-    '1j8letvk': {
-      'en': 'Home',
-      'ar': 'مسكن',
-      'de': 'Heim',
-      'es': 'Casa',
-      'ko': '',
-    },
-  },
   // footprintlist0127
   {
     'np5sb91k': {
@@ -1456,7 +953,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': '',
       'ko': '당신의 발자취',
     },
-    'h119zlc8': {
+    '8b4rrg24': {
       'en': 'Home',
       'ar': '',
       'de': '',
@@ -1681,79 +1178,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ko': '',
     },
   },
-  // information
-  {
-    'i44dse88': {
-      'en': '회원가입',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-    'heyd30jf': {
-      'en': '이름을 입력해주세요',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-    'z9m39amv': {
-      'en': 'Your Age',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-    'ammkdwzg': {
-      'en': 'i.e. 34',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-    'x4b8xaa6': {
-      'en': 'Your Title',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-    'suz37nkt': {
-      'en': 'What is your position?',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-    'tbqaxsgn': {
-      'en': '계정 생성하기',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-    'uiauw57v': {
-      'en': 'Login',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-    'zg8liqod': {
-      'en': '계정이 이미 있나요?',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-    't7d2i1f1': {
-      'en': 'Home',
-      'ar': '',
-      'de': '',
-      'es': '',
-      'ko': '',
-    },
-  },
   // uploadTransport0318
   {
     'jp1mkbvb': {
@@ -1866,7 +1290,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '2wf63trf': {
       'en': '출석하기',
-      'ar': '',
+      'ar': '출힉학',
       'de': '',
       'es': '',
       'ko': '출석하기',
@@ -1979,7 +1403,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': '',
       'ko': '',
     },
-    '5y3zvtrk': {
+    'mzgf9dig': {
       'en': '',
       'ar': '',
       'de': '',

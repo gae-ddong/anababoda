@@ -181,7 +181,6 @@ class _Editaddress0127WidgetState extends State<Editaddress0127Widget> {
                                       .containsKey(FlutterFlowTheme.of(context)
                                           .bodyMediumFamily),
                                 ),
-                            minLines: null,
                             validator: _model.textController1Validator
                                 .asValidator(context),
                           ),
@@ -293,7 +292,6 @@ class _Editaddress0127WidgetState extends State<Editaddress0127Widget> {
                           useGoogleFonts: GoogleFonts.asMap().containsKey(
                               FlutterFlowTheme.of(context).bodyMediumFamily),
                         ),
-                    minLines: null,
                     validator:
                         _model.textController2Validator.asValidator(context),
                   ),
@@ -363,7 +361,6 @@ class _Editaddress0127WidgetState extends State<Editaddress0127Widget> {
                           useGoogleFonts: GoogleFonts.asMap().containsKey(
                               FlutterFlowTheme.of(context).bodyMediumFamily),
                         ),
-                    minLines: null,
                     validator:
                         _model.textController3Validator.asValidator(context),
                   ),

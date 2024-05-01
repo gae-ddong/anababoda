@@ -124,6 +124,11 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                                           setState(() => _model.checkboxValue1 =
                                               newValue!);
                                         },
+                                        side: BorderSide(
+                                          width: 2,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryText,
+                                        ),
                                         activeColor: Color(0xFF435F23),
                                         checkColor: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
@@ -329,6 +334,11 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                                           setState(() => _model.checkboxValue2 =
                                               newValue!);
                                         },
+                                        side: BorderSide(
+                                          width: 2,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryText,
+                                        ),
                                         activeColor: Color(0xFF435F23),
                                         checkColor: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
@@ -723,17 +733,8 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                                   ),
                             ),
                             FFButtonWidget(
-                              onPressed: () async {
-                                await currentUserReference!.update({
-                                  ...mapToFirestore(
-                                    {
-                                      'discount': FieldValue.increment(
-                                          valueOrDefault(
-                                              currentUserDocument?.footprint,
-                                              0)),
-                                    },
-                                  ),
-                                });
+                              onPressed: () {
+                                print('Button pressed ...');
                               },
                               text: FFLocalizations.of(context).getText(
                                 'y4cgk3sg' /* 사용 */,
@@ -800,7 +801,7 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                                   builder: (context) => Text(
                                     formatNumber(
                                       functions.totalcost(valueOrDefault(
-                                          currentUserDocument?.discount, 0)),
+                                          currentUserDocument?.footprint, 0)),
                                       formatType: FormatType.decimal,
                                       decimalType: DecimalType.periodDecimal,
                                     ),
@@ -878,7 +879,8 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
 
                       context.pushNamed('homepage0125');
 
-                      await currentUserReference!.update(createUsersRecordData(
+                      await currentUserReference!
+                          .update(createAccountRecordData(
                         footprint: 0,
                       ));
                     },
@@ -890,7 +892,7 @@ class _Basket0203WidgetState extends State<Basket0203Widget> {
                           builder: (context) => Text(
                             formatNumber(
                               functions.totalcost(valueOrDefault(
-                                  currentUserDocument?.discount, 0)),
+                                  currentUserDocument?.footprint, 0)),
                               formatType: FormatType.decimal,
                               decimalType: DecimalType.periodDecimal,
                             ),

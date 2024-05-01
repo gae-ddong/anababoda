@@ -81,19 +81,10 @@ class _Shoppinglist0126WidgetState extends State<Shoppinglist0126Widget> {
               actions: [
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 10.0, 0.0),
-                  child: InkWell(
-                    splashColor: Colors.transparent,
-                    focusColor: Colors.transparent,
-                    hoverColor: Colors.transparent,
-                    highlightColor: Colors.transparent,
-                    onTap: () async {
-                      context.pushNamed('search0126');
-                    },
-                    child: Icon(
-                      Icons.search_rounded,
-                      color: Color(0xFF435F23),
-                      size: 30.0,
-                    ),
+                  child: Icon(
+                    Icons.search_rounded,
+                    color: Color(0xFF435F23),
+                    size: 30.0,
                   ),
                 ),
                 Padding(

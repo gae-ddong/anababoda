@@ -279,7 +279,6 @@ class _UploadTransport0318WidgetState extends State<UploadTransport0318Widget> {
                       useGoogleFonts: GoogleFonts.asMap().containsKey(
                           FlutterFlowTheme.of(context).bodyMediumFamily),
                     ),
-                minLines: null,
                 validator: _model.textControllerValidator.asValidator(context),
               ),
             ),
