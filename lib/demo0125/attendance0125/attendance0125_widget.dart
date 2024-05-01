@@ -550,13 +550,25 @@ class _Attendance0125WidgetState extends State<Attendance0125Widget> {
                             ? null
                             : () async {
                                 await attendance0125AttendanceRecord!.reference
-                                    .update(createAttendanceRecordData(
-                                  dateCheck: functions.updateDatetime(
-                                      functions.absDate(
-                                          getCurrentTimestamp,
-                                          attendance0125AttendanceRecord!
-                                              .startDate!)),
-                                ));
+                                    .update({
+                                  ...mapToFirestore(
+                                    {
+                                      'dateCheck': FieldValue.increment(functions
+                                          .updateDatetime(functions.absDate(
+                                              getCurrentTimestamp,
+                                              attendance0125AttendanceRecord!
+                                                  .startDate!))),
+                                    },
+                                  ),
+                                });
+
+                                await currentUserReference!.update({
+                                  ...mapToFirestore(
+                                    {
+                                      'footprint': FieldValue.increment(2),
+                                    },
+                                  ),
+                                });
                               },
                         text: FFLocalizations.of(context).getText(
                           '2wf63trf' /* 출석하기 */,

@@ -61,14 +61,6 @@ bool costCounting(String cost) {
   }
 }
 
-bool? checkDate(DateTime time) {
-  final today = DateTime.now();
-
-  if (today.difference(time).inDays > 1) return true;
-
-  return false;
-}
-
 int absDate(
   DateTime currDate,
   DateTime startDate,
@@ -93,13 +85,15 @@ int add(
   return abs + k;
 }
 
-bool checkSeven(DateTime exstartdate) {
-  final today = DateTime.now();
-  bool result = false;
-  if (today.difference(exstartdate).inDays >= 7) {
-    result = true;
-  }
-  return result;
+bool checkSeven(
+  DateTime exstartdate,
+  DateTime currentdate,
+) {
+  Duration difference = currentdate.difference(exstartdate).abs();
+
+  if (difference.inDays > 6) return true;
+
+  return false;
 }
 
 DateTime updateStartdate(

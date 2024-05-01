@@ -217,27 +217,24 @@ class _Mission0125WidgetState extends State<Mission0125Widget> {
                     hoverColor: Colors.transparent,
                     highlightColor: Colors.transparent,
                     onTap: () async {
-                      context.pushNamed('attendance0125');
-
                       await rowAttendanceRecord!.reference
                           .update(createAttendanceRecordData(
-                        checkSeven: functions
-                            .checkSeven(rowAttendanceRecord!.startDate!),
-                      ));
-
-                      await rowAttendanceRecord!.reference
-                          .update(createAttendanceRecordData(
-                        startDate: functions.updateStartdate(
+                        checkSeven: functions.checkSeven(
                             rowAttendanceRecord!.startDate!,
-                            rowAttendanceRecord!.checkSeven),
-                        dateCheck: valueOrDefault<int>(
-                          functions.updateDateCheck(
-                              rowAttendanceRecord!.dateCheck,
-                              rowAttendanceRecord!.checkSeven),
-                          0,
-                        ),
-                        checkSeven: false,
+                            getCurrentTimestamp),
                       ));
+
+                      await rowAttendanceRecord!.reference
+                          .update(createAttendanceRecordData(
+                        startDate: rowAttendanceRecord!.checkSeven
+                            ? getCurrentTimestamp
+                            : rowAttendanceRecord?.startDate,
+                        dateCheck: rowAttendanceRecord!.checkSeven
+                            ? 0
+                            : rowAttendanceRecord?.dateCheck,
+                      ));
+
+                      context.pushNamed('attendance0125');
                     },
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
