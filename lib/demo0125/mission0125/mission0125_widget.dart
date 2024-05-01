@@ -4,7 +4,6 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -217,22 +216,18 @@ class _Mission0125WidgetState extends State<Mission0125Widget> {
                     hoverColor: Colors.transparent,
                     highlightColor: Colors.transparent,
                     onTap: () async {
-                      await rowAttendanceRecord!.reference
-                          .update(createAttendanceRecordData(
-                        checkSeven: functions.checkSeven(
-                            rowAttendanceRecord!.startDate!,
-                            getCurrentTimestamp),
-                      ));
+                      if (rowAttendanceRecord!.checkSeven) {
+                        await rowAttendanceRecord!.reference
+                            .update(createAttendanceRecordData(
+                          startDate: getCurrentTimestamp,
+                          dateCheck: 0,
+                        ));
 
-                      await rowAttendanceRecord!.reference
-                          .update(createAttendanceRecordData(
-                        startDate: rowAttendanceRecord!.checkSeven
-                            ? getCurrentTimestamp
-                            : rowAttendanceRecord?.startDate,
-                        dateCheck: rowAttendanceRecord!.checkSeven
-                            ? 0
-                            : rowAttendanceRecord?.dateCheck,
-                      ));
+                        await rowAttendanceRecord!.reference
+                            .update(createAttendanceRecordData(
+                          checkSeven: false,
+                        ));
+                      }
 
                       context.pushNamed('attendance0125');
                     },

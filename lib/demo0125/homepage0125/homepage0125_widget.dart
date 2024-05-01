@@ -1,8 +1,11 @@
 import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/custom_functions.dart' as functions;
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -442,98 +445,143 @@ class _Homepage0125WidgetState extends State<Homepage0125Widget> {
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
                         ),
-                        child: InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            context.pushNamed('mission0125');
-                          },
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    15.0, 15.0, 15.0, 15.0),
-                                child: Container(
-                                  width: 100.0,
-                                  height: 100.0,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xFF7C826C),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        blurRadius: 2.0,
-                                        color: Color(0x33000000),
-                                        offset: Offset(
-                                          3.0,
-                                          4.0,
-                                        ),
-                                        spreadRadius: 2.0,
-                                      )
-                                    ],
-                                    shape: BoxShape.circle,
-                                    border: Border.all(
-                                      color: Color(0x004B986D),
-                                    ),
-                                  ),
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        30.0, 15.0, 0.0, 0.0),
-                                    child: FaIcon(
-                                      FontAwesomeIcons.coins,
-                                      color: FlutterFlowTheme.of(context)
-                                          .textColor,
-                                      size: 40.0,
-                                    ),
+                        child: StreamBuilder<List<AttendanceRecord>>(
+                          stream: queryAttendanceRecord(
+                            queryBuilder: (attendanceRecord) =>
+                                attendanceRecord.where(
+                              'email',
+                              isEqualTo: currentUserEmail,
+                            ),
+                            singleRecord: true,
+                          ),
+                          builder: (context, snapshot) {
+                            // Customize what your widget looks like when it's loading.
+                            if (!snapshot.hasData) {
+                              return Center(
+                                child: SizedBox(
+                                  width: 60.0,
+                                  height: 60.0,
+                                  child: SpinKitPulse(
+                                    color: Color(0xFF435F23),
+                                    size: 60.0,
                                   ),
                                 ),
-                              ),
-                              Column(
+                              );
+                            }
+                            List<AttendanceRecord> rowAttendanceRecordList =
+                                snapshot.data!;
+                            // Return an empty Container when the item does not exist.
+                            if (snapshot.data!.isEmpty) {
+                              return Container();
+                            }
+                            final rowAttendanceRecord =
+                                rowAttendanceRecordList.isNotEmpty
+                                    ? rowAttendanceRecordList.first
+                                    : null;
+                            return InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                await rowAttendanceRecord!.reference
+                                    .update(createAttendanceRecordData(
+                                  checkSeven: functions.checkSeven(
+                                      rowAttendanceRecord!.startDate!,
+                                      getCurrentTimestamp),
+                                ));
+
+                                context.pushNamed('mission0125');
+                              },
+                              child: Row(
                                 mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 2.0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'en2fjl2t' /* 매일 미션하고  */,
+                                        15.0, 15.0, 15.0, 15.0),
+                                    child: Container(
+                                      width: 100.0,
+                                      height: 100.0,
+                                      decoration: BoxDecoration(
+                                        color: Color(0xFF7C826C),
+                                        boxShadow: [
+                                          BoxShadow(
+                                            blurRadius: 2.0,
+                                            color: Color(0x33000000),
+                                            offset: Offset(
+                                              3.0,
+                                              4.0,
+                                            ),
+                                            spreadRadius: 2.0,
+                                          )
+                                        ],
+                                        shape: BoxShape.circle,
+                                        border: Border.all(
+                                          color: Color(0x004B986D),
+                                        ),
                                       ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .headlineSmall
-                                          .override(
-                                            fontFamily: 'gowum',
-                                            letterSpacing: 0.0,
-                                            fontWeight: FontWeight.w600,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey('gowum'),
-                                          ),
+                                      child: Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            30.0, 15.0, 0.0, 0.0),
+                                        child: FaIcon(
+                                          FontAwesomeIcons.coins,
+                                          color: FlutterFlowTheme.of(context)
+                                              .textColor,
+                                          size: 40.0,
+                                        ),
+                                      ),
                                     ),
                                   ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 2.0, 0.0, 0.0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'zxfgir4f' /* 포인트 모으기 */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'gowum',
-                                            letterSpacing: 0.0,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey('gowum'),
+                                  Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 0.0, 0.0, 2.0),
+                                        child: Text(
+                                          FFLocalizations.of(context).getText(
+                                            'en2fjl2t' /* 매일 미션하고  */,
                                           ),
-                                    ),
+                                          style: FlutterFlowTheme.of(context)
+                                              .headlineSmall
+                                              .override(
+                                                fontFamily: 'gowum',
+                                                letterSpacing: 0.0,
+                                                fontWeight: FontWeight.w600,
+                                                useGoogleFonts:
+                                                    GoogleFonts.asMap()
+                                                        .containsKey('gowum'),
+                                              ),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 2.0, 0.0, 0.0),
+                                        child: Text(
+                                          FFLocalizations.of(context).getText(
+                                            'zxfgir4f' /* 포인트 모으기 */,
+                                          ),
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'gowum',
+                                                letterSpacing: 0.0,
+                                                useGoogleFonts:
+                                                    GoogleFonts.asMap()
+                                                        .containsKey('gowum'),
+                                              ),
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ],
                               ),
-                            ],
-                          ),
+                            );
+                          },
                         ),
                       ),
                       Container(
