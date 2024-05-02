@@ -60,7 +60,7 @@ bool costCounting(String cost) {
     }
   });
 
-  if (largestNumber > 1000) {
+  if (largestNumber > 50000) {
     return true;
   } else {
     return false;
