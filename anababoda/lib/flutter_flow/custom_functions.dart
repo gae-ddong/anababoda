@@ -45,8 +45,11 @@ int checkAttendance(
 }
 
 bool costCounting(String cost) {
+  // 숫자 사이의 쉼표 제거
+  String cleanedCost = cost.replaceAll(',', '');
+
   RegExp regExp = RegExp(r'\d+');
-  Iterable<Match> matches = regExp.allMatches(cost);
+  Iterable<Match> matches = regExp.allMatches(cleanedCost);
   int largestNumber = 0; // 가장 큰 숫자를 저장할 변수 초기화
 
   matches.forEach((match) {
