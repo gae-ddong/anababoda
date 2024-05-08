@@ -133,3 +133,23 @@ int updateDateCheck(
 
   return dateCheck;
 }
+
+double gasFootprint(
+  int usage,
+){
+  return usage*2.176;
+}
+
+double elecFootprint(
+  int currMonth,
+  int previousMonth,
+){
+  return (currMonth - previousMonth) * 0.4781;
+}
+
+double waterFootprint(
+  int currMonth,
+  int previousMonth,
+){
+  return (currMonth - previousMonth) * 0.237;
+}
